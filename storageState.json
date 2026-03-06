@@ -1,0 +1,47 @@
+{
+  "cookies": [
+    {
+      "name": "refreshToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzcxMzI4MTk1LCJleHAiOjE3NzM5MjAxOTV9.X4FOMVLVIozPhLPrcMB3HQ4KsTf8rvQ5m7IkPl54IP8",
+      "domain": "api.bestinfra.app",
+      "path": "/",
+      "expires": 1773920195.166781,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "userDetails",
+      "value": "%7B%22userId%22%3A1%2C%22username%22%3A%22GMR_Admin%22%2C%22email%22%3A%22madhu.bestinfra%40gmail.com%22%2C%22firstName%22%3A%22GMR%22%2C%22lastName%22%3A%22Project%22%2C%22role%22%3A%22Admin%22%2C%22roles%22%3A%5B%22Admin%22%5D%2C%22permissions%22%3A%5B%22consumer%22%2C%22asset_management%22%2C%22user_management_default%22%2C%22users%22%2C%22role_management%22%2C%22meter_management%22%2C%22meter_list%22%2C%22tickets%22%2C%22bills%22%2C%22postpaid%22%2C%22consumer_dashboard%22%2C%22dashboard%22%2C%22rtc%22%5D%2C%22accessLevel%22%3A%22NORMAL%22%2C%22locationId%22%3Anull%7D",
+      "domain": "api.bestinfra.app",
+      "path": "/",
+      "expires": 1773920195.166933,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://portal.gmr.bestinfra.app",
+      "localStorage": [
+        {
+          "name": "theme",
+          "value": "light"
+        },
+        {
+          "name": "gmr_auth_user",
+          "value": "{\"id\":1,\"username\":\"GMR_Admin\",\"email\":\"madhu.bestinfra@gmail.com\",\"firstName\":\"GMR\",\"lastName\":\"Project\",\"role\":\"Admin\",\"roles\":[\"Admin\"],\"permissions\":[\"consumer\",\"asset_management\",\"user_management_default\",\"users\",\"role_management\",\"meter_management\",\"meter_list\",\"tickets\",\"bills\",\"postpaid\",\"consumer_dashboard\",\"dashboard\",\"rtc\"],\"accessLevel\":\"NORMAL\",\"locationId\":null,\"location\":null}"
+        },
+        {
+          "name": "gmr_auth_token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJzdWItYXBwIiwicm9sZXMiOlsiQWRtaW4iXSwicGVybWlzc2lvbnMiOlsiY29uc3VtZXIiLCJhc3NldF9tYW5hZ2VtZW50IiwidXNlcl9tYW5hZ2VtZW50X2RlZmF1bHQiLCJ1c2VycyIsInJvbGVfbWFuYWdlbWVudCIsIm1ldGVyX21hbmFnZW1lbnQiLCJtZXRlcl9saXN0IiwidGlja2V0cyIsImJpbGxzIiwicG9zdHBhaWQiLCJjb25zdW1lcl9kYXNoYm9hcmQiLCJkYXNoYm9hcmQiLCJydGMiXSwibG9jYXRpb25JZCI6bnVsbCwiaWF0IjoxNzcxMzI4MTk1LCJleHAiOjE3NzEzMzE3OTV9.92elTsHSztKrzxDIgcPqsLwCZ0QIbHvzC8IsI0A-50U"
+        },
+        {
+          "name": "sidebarCollapsed",
+          "value": "false"
+        }
+      ]
+    }
+  ]
+}

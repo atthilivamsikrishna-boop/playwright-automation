@@ -1,17 +1,30 @@
 {
   "name": "gmr",
   "version": "1.0.0",
+  "description": "Playwright POM framework with Allure reporting",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "allure:serve": "npx allure-commandline serve allure-results",
+    "allure:generate": "npx allure-commandline generate allure-results --clean",
+    "allure:open": "npx allure-commandline open allure-report",
+    "test:report": "playwright test && allure serve allure-results"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.2.3"
+    "@types/node": "^25.2.3",
+    "allure-commandline": "^2.37.0",
+    "allure-playwright": "^3.5.0"
   },
   "dependencies": {
-    "dotenv": "^17.3.1"
+    "@faker-js/faker": "^10.3.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.3.1",
+    "xlsx": "^0.18.5"
   }
 }

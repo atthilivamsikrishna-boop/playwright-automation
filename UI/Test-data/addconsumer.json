@@ -1,0 +1,13 @@
+{
+  "consumer": {
+    "firstname": "Ravi",
+    "lastname": "Kiran",
+    "email": "test@email.com",
+    "phone": "9705015040",
+    "idtype": "Aadhar Card",
+    "idnumber": "940514506975",
+    "propertytype": "Residential",
+    "moveindate": "2026-02-20",
+    "accounttype": "Residential"
+  }
+}
