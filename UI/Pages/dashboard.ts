@@ -187,7 +187,7 @@ export class DashboardPage {
         await this.metersearchbar.scrollIntoViewIfNeeded();
         await this.metersearchbar.fill(value);
         await this.metersearch.click();
-    }
+    }                                   
     async selectMeterDropdown(option: string) {
         await this.meterDropdown.select(option);
     }

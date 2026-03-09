@@ -13,7 +13,7 @@ type MyFixtures = {
   logoutpage: LogoutPage;
   consumerpage: ConsumerPage;
   consumertablepage: ConsumersTablesPage;
-  dashboardapi: DashboardApi
+  dashboardapi: DashboardApi;
   consumerapi : ConsumerApi;
 };
 
@@ -40,9 +40,9 @@ export const test = base.extend<MyFixtures>({
    dashboardapi: async ({ request,page }, use) => {
     await use(new DashboardApi(request,page));
   },
-  consumerapi: async ({ request,page }, use) => {
+  consumerapi: async ({ request,page, }, use) => {
     await use(new ConsumerApi(request,page));
-  }
+  },
 
 });
 

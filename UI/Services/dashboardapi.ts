@@ -11,7 +11,21 @@ export class DashboardApi {
     const response = await this.request.get(process.env.TABLE_API_URL!);
     return response.json();
   }
-  async (){
-    
+  async getwigdetsrecords() {
+    const response = await this.request.get(process.env.WIDGET_URL!);
+    return response.json();
   }
+  async getMeterEvent() {
+    const response = await this.request.get(process.env.METER_EVENT!);
+    return response.json();
+  }
+  async Trariff(){
+    const response = await this.request.get(process.env.TARIFF_URL!);
+    return response.json();
+  }
+  async Graph(){
+    const response = await this.request.get(process.env.GRAPH_URL!);
+    return response.json();
+  }
+
 }

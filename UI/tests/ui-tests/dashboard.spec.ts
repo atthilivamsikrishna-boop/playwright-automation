@@ -2,7 +2,7 @@
 import { test, expect } from 'UI/Fixtures/page';
 import { DashboardPage } from 'UI/Pages/dashboard'
 import { DashboardApi } from 'UI/Services/dashboardapi'
-
+import { Dropdown } from 'UI/Test-data/metertable.json';
 test('Dashboard loads after auto login', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveURL("https://portal.gmr.bestinfra.app/");
@@ -114,4 +114,9 @@ test('validate the Total Records of the Tabale', async ({ page, dashboardPage, c
     const count = await dashboardPage.table.TotalCount();
     await expect(records).toBe(5);
 })
+test('Validate the Per Page Dropdown',async({page,dashboardPage})=>{
+    await page.goto('/');
+    await dashboardPage.selectMeterDropdown(Dropdown);
+})
+
 

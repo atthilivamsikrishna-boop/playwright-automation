@@ -1,0 +1,35 @@
+[
+  {
+    id: 3,
+    name: 'HT 33KV',
+    category: 'INDUSTRIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  },
+  {
+    id: 1,
+    name: 'HT 33KV',
+    category: 'COMMERCIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  },
+  {
+    id: 2,
+    name: 'HT 11KV',
+    category: 'COMMERCIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  }
+]

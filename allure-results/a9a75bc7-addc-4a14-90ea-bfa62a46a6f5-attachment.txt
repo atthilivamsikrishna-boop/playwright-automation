@@ -1,0 +1,116 @@
+{
+  success: true,
+  data: [
+    {
+      'S.No': 1,
+      'Consumer Number': 'CON-1019',
+      'Consumer Name': 'Arena',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 2,
+      'Consumer Number': '4100008789',
+      'Consumer Name': 'Safran MRO',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 3,
+      'Consumer Number': '4100007376',
+      'Consumer Name': 'Delhi Public School',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 4,
+      'Consumer Number': '4100005828',
+      'Consumer Name': 'Safran Electrical',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 5,
+      'Consumer Number': '4100005439',
+      'Consumer Name': 'Multisorb Technologies',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 6,
+      'Consumer Number': '4100006123',
+      'Consumer Name': 'Cyient DLM',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 7,
+      'Consumer Number': 'I1163',
+      'Consumer Name': 'GMR 147 Business School',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 8,
+      'Consumer Number': '4100008046',
+      'Consumer Name': 'Schneider Electric',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 9,
+      'Consumer Number': '4100008190',
+      'Consumer Name': 'Amity',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 10,
+      'Consumer Number': 'CON-1014',
+      'Consumer Name': 'NOVOTEL',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 11,
+      'Consumer Number': '4100007176',
+      'Consumer Name': 'Skyroot',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 12,
+      'Consumer Number': '4100008953',
+      'Consumer Name': 'Technific FMC',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 13,
+      'Consumer Number': 'I1173',
+      'Consumer Name': 'ESR Industrial',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 14,
+      'Consumer Number': '1000003955',
+      'Consumer Name': 'Casper Pharma India Ltd',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 15,
+      'Consumer Number': 'CON-1002',
+      'Consumer Name': 'GMR AERO TOWER 2 INCOMER',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 16,
+      'Consumer Number': '4100006262-1',
+      'Consumer Name': 'Safran Aircraft Engine Mini Workshop',
+      'Consumption(kVAh)': '0.000'
+    },
+    {
+      'S.No': 17,
+      'Consumer Number': '4100005169',
+      'Consumer Name': 'Cronus Pharma',
+      'Consumption(kVAh)': '0.000'
+    }
+  ],
+  pagination: {
+    currentPage: 1,
+    totalPages: 1,
+    totalCount: 17,
+    limit: 20,
+    hasNextPage: false,
+    hasPrevPage: false
+  },
+  message: 'communicating data retrieved successfully'
+}

@@ -85,5 +85,4 @@ test('Validate the rowdata ',async({page,dashboardPage,consumerpage,consumertabl
     await dashboardPage.navigatetoconsumers();
     const rdata = await consumertablepage.table.getRowData
     console.log(rdata);
-    
 })

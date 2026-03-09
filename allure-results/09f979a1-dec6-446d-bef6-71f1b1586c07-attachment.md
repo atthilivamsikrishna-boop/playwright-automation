@@ -1,0 +1,210 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation "Main navigation" [ref=e5]:
+    - generic [ref=e6]:
+      - generic "Go to home page" [ref=e8] [cursor=pointer]:
+        - img "Company Logo" [ref=e9]
+      - main [ref=e10]:
+        - region "GENERAL" [ref=e11]:
+          - heading "GENERAL" [level=2] [ref=e12]
+          - list [ref=e13]:
+            - listitem [ref=e14]:
+              - generic [ref=e16] [cursor=pointer]:
+                - img [ref=e18]
+                - generic [ref=e20]: Dashboard
+            - listitem [ref=e21]:
+              - generic [ref=e23] [cursor=pointer]:
+                - img [ref=e25]
+                - generic [ref=e27]: Consumers
+            - listitem [ref=e28]:
+              - generic [ref=e29]:
+                - generic [ref=e31] [cursor=pointer]:
+                  - img [ref=e33]
+                  - generic [ref=e34]:
+                    - generic [ref=e35]: Bills
+                    - img [ref=e37]
+                - list:
+                  - listitem [ref=e39]:
+                    - button "Postpaid" [ref=e41] [cursor=pointer]
+            - listitem [ref=e42]:
+              - generic [ref=e44] [cursor=pointer]:
+                - img [ref=e46]
+                - generic [ref=e48]: Tickets
+            - listitem [ref=e49]:
+              - generic [ref=e51] [cursor=pointer]:
+                - img [ref=e53]
+                - generic [ref=e55]: Asset Management
+            - listitem [ref=e56]:
+              - generic [ref=e58] [cursor=pointer]:
+                - img [ref=e60]
+                - generic [ref=e62]: Meter RTC
+            - listitem [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e66] [cursor=pointer]:
+                  - img [ref=e68]
+                  - generic [ref=e69]:
+                    - generic [ref=e70]: User Management
+                    - img [ref=e72]
+                - list:
+                  - listitem [ref=e74]:
+                    - button "Users" [ref=e76] [cursor=pointer]
+                  - listitem [ref=e77]:
+                    - button "Role Management" [ref=e79] [cursor=pointer]
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - img [ref=e83]
+        - paragraph [ref=e84]: Client Information
+      - generic [ref=e85]:
+        - paragraph [ref=e86]:
+          - generic [ref=e87]: © 2026 Best Infra Pvt. Ltd.
+        - generic "Toggle dark mode" [ref=e88] [cursor=pointer]:
+          - img [ref=e89]
+  - generic [ref=e90]:
+    - banner [ref=e91]:
+      - navigation [ref=e92]:
+        - figure "Toggle sidebar" [ref=e93] [cursor=pointer]:
+          - img "Collapse Sidebar" [ref=e94]
+        - heading "Dashboard" [level=1] [ref=e95]
+      - region "Search section" [ref=e96]:
+        - generic [ref=e98]:
+          - searchbox "Search" [ref=e99]
+          - img "Search" [ref=e102]
+          - generic [ref=e104]:
+            - generic [ref=e105]: Ctrl
+            - generic [ref=e106]: +
+            - generic [ref=e107]: K
+      - navigation "User actions" [ref=e108]:
+        - figure "Tariff Details" [ref=e109] [cursor=pointer]:
+          - img "Tariff icon" [ref=e110]
+        - figure "Toggle full screen" [ref=e111] [cursor=pointer]:
+          - img "Maximize icon" [ref=e112]
+        - figure "Notifications" [ref=e114] [cursor=pointer]:
+          - img "Notifications" [ref=e115]
+        - figure "Profile" [ref=e117] [cursor=pointer]:
+          - img "GMR Client" [ref=e118]
+    - main [ref=e119]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e124]:
+            - heading "Consumer Statistics (Mar 7, 2026)" [level=2] [ref=e128]
+            - generic [ref=e131]:
+              - generic [ref=e132] [cursor=pointer]:
+                - generic [ref=e133]:
+                  - heading "Total Consumers" [level=3] [ref=e135]
+                  - paragraph [ref=e136]: "19"
+                - figure [ref=e137]:
+                  - img "Total Consumers Icon" [ref=e138]
+              - generic [ref=e139]:
+                - paragraph [ref=e140]: 17 Communicating
+                - paragraph [ref=e141]: 2 Non-Communicating
+            - generic [ref=e144]:
+              - generic [ref=e145] [cursor=pointer]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - heading "High-Usage Consumers" [level=3] [ref=e148]
+                    - button "Information" [ref=e150]:
+                      - img "Info" [ref=e151]
+                  - paragraph [ref=e152]: "0"
+                - figure [ref=e153]:
+                  - img "High-Usage Consumers Icon" [ref=e154]
+              - paragraph [ref=e156]: Exceeding Max Demand
+          - generic [ref=e158]:
+            - generic [ref=e160]:
+              - heading "Consumption & Billing (Mar 6, 2026)" [level=2] [ref=e162]
+              - generic [ref=e164]:
+                - generic [ref=e166] [cursor=pointer]: Daily
+                - generic [ref=e167] [cursor=pointer]: Monthly
+            - generic [ref=e170]:
+              - generic [ref=e171] [cursor=pointer]:
+                - generic [ref=e172]:
+                  - heading "Electricity Usage (kVAh)" [level=3] [ref=e174]
+                  - paragraph [ref=e175]:
+                    - text: 1,00,145
+                    - img "Trending Down" [ref=e176]
+                - figure [ref=e177]:
+                  - img "Electricity Usage (kVAh) Icon" [ref=e178]
+              - paragraph [ref=e180]: 1,00,180 kVAh
+            - generic [ref=e183]:
+              - generic [ref=e184] [cursor=pointer]:
+                - generic [ref=e185]:
+                  - generic [ref=e186]:
+                    - heading "Electricity Charges (Tentative)" [level=3] [ref=e187]
+                    - button "Information" [ref=e189]:
+                      - img "Info" [ref=e190]
+                  - paragraph [ref=e191]:
+                    - text: ₹68,00,400.00
+                    - img "Trending Up" [ref=e192]
+                - figure [ref=e193]:
+                  - img "Electricity Charges (Tentative) Icon"
+              - paragraph [ref=e195]: ₹63,60,400.00
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - heading "Daily Energy Consumption (kVAh) (Jan 03 - Mar 06)" [level=3] [ref=e201]
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - generic [ref=e205] [cursor=pointer]: Daily
+                - generic [ref=e206] [cursor=pointer]: Monthly
+              - button "Graph View" [ref=e207] [cursor=pointer]:
+                - img "Graph View" [ref=e208]
+              - button "Table View" [ref=e209] [cursor=pointer]:
+                - img "Table View" [ref=e210]
+              - button "Download" [ref=e212] [cursor=pointer]:
+                - img "Download" [ref=e213]
+          - img "Energy consumption chart showing daily and monthly data in kWh" [ref=e215]
+        - generic [ref=e219]:
+          - generic [ref=e223]:
+            - generic [ref=e224]:
+              - heading "Meters Communication Status" [level=3] [ref=e225]
+              - button "Download" [ref=e228] [cursor=pointer]:
+                - img "Download" [ref=e229]
+            - img "pie radius chart" [ref=e231]:
+              - img [ref=e235]:
+                - generic [ref=e237]:
+                  - generic [ref=e239]: "19"
+                  - generic [ref=e243]:
+                    - generic [ref=e245]: "Communicating: 17 (89.5%)"
+                    - generic [ref=e248]: "Non-Communicating: 2 (10.5%)"
+                  - generic [ref=e251]: 1/2
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]: Meter Latest Events
+              - button "Download table data" [ref=e260]:
+                - img "Download Excel" [ref=e261]
+            - generic [ref=e263]:
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - generic [ref=e266]:
+                    - textbox "Search by Meter SI No or Consumer Name..." [ref=e267]
+                    - img "search" [ref=e269]
+                  - combobox [ref=e273] [cursor=pointer]:
+                    - generic [ref=e274]: MTR001236
+                    - img [ref=e275]
+                - button "Clear All Filters" [ref=e279]
+              - grid "Data Table" [ref=e282]:
+                - rowgroup [ref=e283]:
+                  - row "S.No Meter SI No Consumer Name Event Date Time Event Description Status Duration Actions" [ref=e284]:
+                    - columnheader "S.No" [ref=e285] [cursor=pointer]
+                    - columnheader "Meter SI No" [ref=e286] [cursor=pointer]
+                    - columnheader "Consumer Name" [ref=e287] [cursor=pointer]
+                    - columnheader "Event Date Time" [ref=e288] [cursor=pointer]
+                    - columnheader "Event Description" [ref=e289] [cursor=pointer]
+                    - columnheader "Status" [ref=e290] [cursor=pointer]
+                    - columnheader "Duration" [ref=e291] [cursor=pointer]
+                    - columnheader "Actions" [ref=e292]
+                - rowgroup [ref=e293]:
+                  - row [ref=e294]:
+                    - gridcell [ref=e295]:
+                      - status [ref=e296]: No data available
+              - generic [ref=e297]:
+                - generic [ref=e298]:
+                  - combobox [ref=e302] [cursor=pointer]:
+                    - generic [ref=e303]: 5 Per Page
+                    - img [ref=e304]
+                  - generic [ref=e306]: "Total: 20"
+                - generic [ref=e307]:
+                  - button "Previous" [disabled] [ref=e308]
+                  - generic [ref=e309]: Page 1 of 4
+                  - button "Next" [ref=e310] [cursor=pointer]
+```

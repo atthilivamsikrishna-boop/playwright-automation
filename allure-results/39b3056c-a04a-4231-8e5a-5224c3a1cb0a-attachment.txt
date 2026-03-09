@@ -1,0 +1,11 @@
+------------- API DATA -------------
+{
+  "totalConsumers": 19,
+  "activeConsumers": 17,
+  "inactiveConsumers": 2,
+  "highUsageConsumers": 0,
+  "highUsageMeterIds": [],
+  "averageConsumption": "0.00"
+}
+------------- UI DATA -------------
+{ totalConsumers: 19, highUsageConsumers: 0 }

@@ -1,0 +1,289 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation "Main navigation" [ref=e5]:
+    - generic [ref=e6]:
+      - generic "Go to home page" [ref=e8] [cursor=pointer]:
+        - img "Company Logo" [ref=e9]
+      - main [ref=e10]:
+        - region "GENERAL" [ref=e11]:
+          - heading "GENERAL" [level=2] [ref=e12]
+          - list [ref=e13]:
+            - listitem [ref=e14]:
+              - generic [ref=e16] [cursor=pointer]:
+                - img [ref=e18]
+                - generic [ref=e20]: Dashboard
+            - listitem [ref=e21]:
+              - generic [ref=e23] [cursor=pointer]:
+                - img [ref=e25]
+                - generic [ref=e27]: Consumers
+            - listitem [ref=e28]:
+              - generic [ref=e29]:
+                - generic [ref=e31] [cursor=pointer]:
+                  - img [ref=e33]
+                  - generic [ref=e34]:
+                    - generic [ref=e35]: Bills
+                    - img [ref=e37]
+                - list:
+                  - listitem [ref=e39]:
+                    - button "Postpaid" [ref=e41] [cursor=pointer]
+            - listitem [ref=e42]:
+              - generic [ref=e44] [cursor=pointer]:
+                - img [ref=e46]
+                - generic [ref=e48]: Tickets
+            - listitem [ref=e49]:
+              - generic [ref=e51] [cursor=pointer]:
+                - img [ref=e53]
+                - generic [ref=e55]: Asset Management
+            - listitem [ref=e56]:
+              - generic [ref=e58] [cursor=pointer]:
+                - img [ref=e60]
+                - generic [ref=e62]: Meter RTC
+            - listitem [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e66] [cursor=pointer]:
+                  - img [ref=e68]
+                  - generic [ref=e69]:
+                    - generic [ref=e70]: User Management
+                    - img [ref=e72]
+                - list:
+                  - listitem [ref=e74]:
+                    - button "Users" [ref=e76] [cursor=pointer]
+                  - listitem [ref=e77]:
+                    - button "Role Management" [ref=e79] [cursor=pointer]
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - img [ref=e83]
+        - paragraph [ref=e84]: Client Information
+      - generic [ref=e85]:
+        - paragraph [ref=e86]:
+          - generic [ref=e87]: © 2026 Best Infra Pvt. Ltd.
+        - generic "Toggle dark mode" [ref=e88] [cursor=pointer]:
+          - img [ref=e89]
+  - generic [ref=e90]:
+    - banner [ref=e91]:
+      - navigation [ref=e92]:
+        - figure "Toggle sidebar" [ref=e93] [cursor=pointer]:
+          - img "Collapse Sidebar" [ref=e94]
+        - heading "Consumer Management" [level=1] [ref=e95]
+      - region "Search section" [ref=e96]:
+        - generic [ref=e98]:
+          - searchbox "Search" [ref=e99]
+          - img "Search" [ref=e102]
+          - generic [ref=e104]:
+            - generic [ref=e105]: Ctrl
+            - generic [ref=e106]: +
+            - generic [ref=e107]: K
+      - navigation "User actions" [ref=e108]:
+        - figure "Tariff Details" [ref=e109] [cursor=pointer]:
+          - img "Tariff icon" [ref=e110]
+        - figure "Toggle full screen" [ref=e111] [cursor=pointer]:
+          - img "Maximize icon" [ref=e112]
+        - figure "Notifications" [ref=e114] [cursor=pointer]:
+          - img "Notifications" [ref=e115]
+        - figure "Profile" [ref=e117] [cursor=pointer]:
+          - img "GMR Client" [ref=e118]
+    - main [ref=e119]:
+      - generic [ref=e122]:
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - heading "Consumers" [level=1] [ref=e127]:
+              - generic [ref=e129]: Consumers
+            - generic [ref=e130] [cursor=pointer]:
+              - img "back" [ref=e132]
+              - generic [ref=e133]: Back to Dashboard
+          - generic [ref=e134]:
+            - generic [ref=e138]:
+              - textbox "Start date" [ref=e140]
+              - generic "to" [ref=e142]:
+                - img "swap-right" [ref=e143]:
+                  - img [ref=e144]
+              - textbox "End date" [ref=e147]
+              - generic:
+                - img "calendar":
+                  - img
+            - generic [ref=e148]:
+              - button "Add Consumer" [ref=e149] [cursor=pointer]
+              - button "Export" [ref=e150] [cursor=pointer]
+            - generic "Filter Menu" [ref=e151] [cursor=pointer]:
+              - img "dropdown" [ref=e152]
+        - generic [ref=e154]:
+          - generic [ref=e156]: Consumer List
+          - generic [ref=e158]:
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - textbox "Search by Consumer Name..." [ref=e162]
+                - img "search" [ref=e164]
+              - button "Filter" [ref=e167] [cursor=pointer]:
+                - img "Filter" [ref=e168]
+                - generic [ref=e169]: "9"
+            - grid "Consumer Management Table" [ref=e172]:
+              - rowgroup [ref=e173]:
+                - row "S.No UID Consumer Name Meter SI No Last Communication Date CMD RMD Occurred DateTime Consumption(KVAh) Actions" [ref=e174]:
+                  - columnheader [ref=e175]:
+                    - checkbox [ref=e179] [cursor=pointer]
+                  - columnheader "S.No" [ref=e181] [cursor=pointer]
+                  - columnheader "UID" [ref=e182] [cursor=pointer]
+                  - columnheader "Consumer Name" [ref=e183] [cursor=pointer]
+                  - columnheader "Meter SI No" [ref=e184] [cursor=pointer]
+                  - columnheader "Last Communication Date" [ref=e185] [cursor=pointer]
+                  - columnheader "CMD" [ref=e186] [cursor=pointer]
+                  - columnheader "RMD" [ref=e187] [cursor=pointer]
+                  - columnheader "Occurred DateTime" [ref=e188] [cursor=pointer]
+                  - columnheader "Consumption(KVAh)" [ref=e189] [cursor=pointer]
+                  - columnheader "Actions" [ref=e190]
+              - rowgroup [ref=e191]:
+                - button "11 BI25GMRA0006 Safran Aircraft Engine Main Plant X1428391 Mar 4, 2026 10:00 AM 1200 1108.00 Mar 3, 2026 6:00 PM NA View" [ref=e192] [cursor=pointer]:
+                  - gridcell [ref=e193]:
+                    - checkbox [ref=e196]
+                  - gridcell "11" [ref=e198]
+                  - gridcell "BI25GMRA0006" [ref=e199]
+                  - gridcell "Safran Aircraft Engine Main Plant" [ref=e200]
+                  - gridcell "X1428391" [ref=e201]
+                  - gridcell "Mar 4, 2026 10:00 AM" [ref=e202]
+                  - gridcell "1200" [ref=e203]
+                  - gridcell "1108.00" [ref=e204]
+                  - gridcell "Mar 3, 2026 6:00 PM" [ref=e205]
+                  - gridcell "NA" [ref=e206]
+                  - gridcell "View" [ref=e207]:
+                    - generic "View" [ref=e209]:
+                      - img "View" [ref=e210]
+                - button "12 BI25GMRA0015 Safran MRO 24021286 Mar 9, 2026 11:00 AM 1500 1213.00 Mar 5, 2026 9:45 AM 3530.000 View" [ref=e211] [cursor=pointer]:
+                  - gridcell [ref=e212]:
+                    - checkbox [ref=e215]
+                  - gridcell "12" [ref=e217]
+                  - gridcell "BI25GMRA0015" [ref=e218]
+                  - gridcell "Safran MRO" [ref=e219]
+                  - gridcell "24021286" [ref=e220]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e221]
+                  - gridcell "1500" [ref=e222]
+                  - gridcell "1213.00" [ref=e223]
+                  - gridcell "Mar 5, 2026 9:45 AM" [ref=e224]
+                  - gridcell "3530.000" [ref=e225]
+                  - gridcell "View" [ref=e226]:
+                    - generic "View" [ref=e228]:
+                      - img "View" [ref=e229]
+                - button "13 BI25GMRA0003 Cyient DLM X1244179 Mar 9, 2026 11:00 AM 700 572.00 Mar 3, 2026 2:15 PM 480.000 View" [ref=e230] [cursor=pointer]:
+                  - gridcell [ref=e231]:
+                    - checkbox [ref=e234]
+                  - gridcell "13" [ref=e236]
+                  - gridcell "BI25GMRA0003" [ref=e237]
+                  - gridcell "Cyient DLM" [ref=e238]
+                  - gridcell "X1244179" [ref=e239]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e240]
+                  - gridcell "700" [ref=e241]
+                  - gridcell "572.00" [ref=e242]
+                  - gridcell "Mar 3, 2026 2:15 PM" [ref=e243]
+                  - gridcell "480.000" [ref=e244]
+                  - gridcell "View" [ref=e245]:
+                    - generic "View" [ref=e247]:
+                      - img "View" [ref=e248]
+                - button "14 BI25GMRA0011 Delhi Public School X2091454 Mar 9, 2026 11:00 AM 100 35.20 Mar 6, 2026 11:15 AM 165.000 View" [ref=e249] [cursor=pointer]:
+                  - gridcell [ref=e250]:
+                    - checkbox [ref=e253]
+                  - gridcell "14" [ref=e255]
+                  - gridcell "BI25GMRA0011" [ref=e256]
+                  - gridcell "Delhi Public School" [ref=e257]
+                  - gridcell "X2091454" [ref=e258]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e259]
+                  - gridcell "100" [ref=e260]
+                  - gridcell "35.20" [ref=e261]
+                  - gridcell "Mar 6, 2026 11:15 AM" [ref=e262]
+                  - gridcell "165.000" [ref=e263]
+                  - gridcell "View" [ref=e264]:
+                    - generic "View" [ref=e266]:
+                      - img "View" [ref=e267]
+                - button "15 BI25GMRA0014 Technific FMC 23010587 Mar 9, 2026 11:00 AM 2000 527.90 Mar 6, 2026 4:30 PM 6100.000 View" [ref=e268] [cursor=pointer]:
+                  - gridcell [ref=e269]:
+                    - checkbox [ref=e272]
+                  - gridcell "15" [ref=e274]
+                  - gridcell "BI25GMRA0014" [ref=e275]
+                  - gridcell "Technific FMC" [ref=e276]
+                  - gridcell "23010587" [ref=e277]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e278]
+                  - gridcell "2000" [ref=e279]
+                  - gridcell "527.90" [ref=e280]
+                  - gridcell "Mar 6, 2026 4:30 PM" [ref=e281]
+                  - gridcell "6100.000" [ref=e282]
+                  - gridcell "View" [ref=e283]:
+                    - generic "View" [ref=e285]:
+                      - img "View" [ref=e286]
+                - button "16 BI25GMRA0001 GMR AERO TOWER 2 INCOMER 18132429 Mar 9, 2026 11:00 AM 1000 739.70 May 14, 2025 12:45 PM 3800.000 View" [ref=e287] [cursor=pointer]:
+                  - gridcell [ref=e288]:
+                    - checkbox [ref=e291]
+                  - gridcell "16" [ref=e293]
+                  - gridcell "BI25GMRA0001" [ref=e294]
+                  - gridcell "GMR AERO TOWER 2 INCOMER" [ref=e295]
+                  - gridcell "18132429" [ref=e296]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e297]
+                  - gridcell "1000" [ref=e298]
+                  - gridcell "739.70" [ref=e299]
+                  - gridcell "May 14, 2025 12:45 PM" [ref=e300]
+                  - gridcell "3800.000" [ref=e301]
+                  - gridcell "View" [ref=e302]:
+                    - generic "View" [ref=e304]:
+                      - img "View" [ref=e305]
+                - button "17 BI25GMRA0002 Cronus Pharma X1580068 Mar 9, 2026 11:00 AM 1800 1392.00 Mar 2, 2026 7:00 PM 22380.000 View" [ref=e306] [cursor=pointer]:
+                  - gridcell [ref=e307]:
+                    - checkbox [ref=e310]
+                  - gridcell "17" [ref=e312]
+                  - gridcell "BI25GMRA0002" [ref=e313]
+                  - gridcell "Cronus Pharma" [ref=e314]
+                  - gridcell "X1580068" [ref=e315]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e316]
+                  - gridcell "1800" [ref=e317]
+                  - gridcell "1392.00" [ref=e318]
+                  - gridcell "Mar 2, 2026 7:00 PM" [ref=e319]
+                  - gridcell "22380.000" [ref=e320]
+                  - gridcell "View" [ref=e321]:
+                    - generic "View" [ref=e323]:
+                      - img "View" [ref=e324]
+                - button "18 BI25GMRA0019 Amity X2199608 Mar 9, 2026 11:00 AM 700 244.00 Mar 2, 2026 12:30 PM 2460.000 View" [ref=e325] [cursor=pointer]:
+                  - gridcell [ref=e326]:
+                    - checkbox [ref=e329]
+                  - gridcell "18" [ref=e331]
+                  - gridcell "BI25GMRA0019" [ref=e332]
+                  - gridcell "Amity" [ref=e333]
+                  - gridcell "X2199608" [ref=e334]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e335]
+                  - gridcell "700" [ref=e336]
+                  - gridcell "244.00" [ref=e337]
+                  - gridcell "Mar 2, 2026 12:30 PM" [ref=e338]
+                  - gridcell "2460.000" [ref=e339]
+                  - gridcell "View" [ref=e340]:
+                    - generic "View" [ref=e342]:
+                      - img "View" [ref=e343]
+                - button "19 BI25GMRA0017 Arena 24021328 Mar 9, 2026 11:00 AM 1000 332.50 Mar 5, 2026 12:30 PM 820.000 View" [ref=e344] [cursor=pointer]:
+                  - gridcell [ref=e345]:
+                    - checkbox [ref=e348]
+                  - gridcell "19" [ref=e350]
+                  - gridcell "BI25GMRA0017" [ref=e351]
+                  - gridcell "Arena" [ref=e352]
+                  - gridcell "24021328" [ref=e353]
+                  - gridcell "Mar 9, 2026 11:00 AM" [ref=e354]
+                  - gridcell "1000" [ref=e355]
+                  - gridcell "332.50" [ref=e356]
+                  - gridcell "Mar 5, 2026 12:30 PM" [ref=e357]
+                  - gridcell "820.000" [ref=e358]
+                  - gridcell "View" [ref=e359]:
+                    - generic "View" [ref=e361]:
+                      - img "View" [ref=e362]
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - combobox [ref=e368] [cursor=pointer]:
+                  - generic [ref=e369]: 10 Per Page
+                  - img [ref=e370]
+                - generic [ref=e372]:
+                  - generic:
+                    - generic:
+                      - combobox:
+                        - generic: Select Status
+                        - img
+                - button "Submit" [disabled] [ref=e373]
+                - generic [ref=e374]: "Total: 19"
+              - generic [ref=e375]:
+                - button "Previous" [ref=e376] [cursor=pointer]
+                - generic [ref=e377]: Page 2 of 2
+                - button "Next" [disabled] [ref=e378]
+```

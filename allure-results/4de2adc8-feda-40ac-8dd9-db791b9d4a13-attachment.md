@@ -1,0 +1,76 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - generic [ref=e8]:
+    - generic [ref=e11]:
+      - generic [ref=e16]:
+        - img [ref=e20]
+        - img [ref=e24]
+        - img "Feature Highlight" [ref=e28]
+        - img [ref=e32]
+        - img [ref=e36]
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "Feature Highlight"
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+      - generic [ref=e38]:
+        - heading "Feature Highlight" [level=2] [ref=e39]
+        - paragraph [ref=e40]: Optimize energy use with real-time monitoring, anomaly detection, and a centralized dashboard for smarter, cost-effective decisions.
+    - generic [ref=e41]:
+      - button "Go to slide 1" [ref=e42] [cursor=pointer]
+      - button "Go to slide 2" [ref=e43] [cursor=pointer]
+      - button "Go to slide 3" [ref=e44] [cursor=pointer]
+  - generic [ref=e46]:
+    - generic [ref=e49]:
+      - img "arrow-left" [ref=e51]
+      - heading "Back to Website" [level=2] [ref=e52]
+    - generic [ref=e56]:
+      - img "Logo" [ref=e63] [cursor=pointer]
+      - form "Form" [ref=e65]:
+        - generic [ref=e67]:
+          - generic [ref=e72]:
+            - textbox "Email or Username" [ref=e73] [cursor=pointer]
+            - generic:
+              - img "icon"
+          - generic [ref=e78]:
+            - textbox "Enter your password" [ref=e79] [cursor=pointer]
+            - button "Show password" [ref=e80]:
+              - img [ref=e81]
+          - generic [ref=e88] [cursor=pointer]:
+            - generic [ref=e89]:
+              - checkbox "Check Keep me signed in" [checked] [ref=e90]
+              - img "Check" [ref=e92]
+            - generic [ref=e94]: Keep me signed in
+          - generic [ref=e101] [cursor=pointer]: Forgot Password?
+        - button "Login" [ref=e104] [cursor=pointer]
+    - generic [ref=e106]:
+      - heading "Need Help? Contact Support" [level=3] [ref=e108]:
+        - generic [ref=e109]:
+          - text: Need Help?
+          - generic [ref=e110] [cursor=pointer]: Contact Support
+      - generic [ref=e112]:
+        - generic [ref=e113] [cursor=pointer]: Terms of Service
+        - generic [ref=e114] [cursor=pointer]: Privacy Policy
+```

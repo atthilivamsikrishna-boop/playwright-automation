@@ -1,0 +1,10 @@
+{
+  'S.No': '1',
+  'Meter SI No': '18132429',
+  'Consumer Name': 'GMR AERO TOWER 2 INCOMER',
+  'Event Date Time': 'Mar 7, 2026, 6:34 AM',
+  'Event Description': 'Y_PH CT Open',
+  Status: 'Active',
+  Duration: '3h 35m',
+  Actions: ''
+}
