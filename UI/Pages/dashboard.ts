@@ -2,6 +2,7 @@
 import { Page, Locator, expect } from '@playwright/test';
 import { Dropdown } from '../Components/dropdown';
 import { TableComponent } from 'UI/Components/tablengine';
+import { text } from 'stream/consumers';
 
 export class DashboardPage {
     readonly page: Page;
@@ -28,11 +29,17 @@ export class DashboardPage {
     readonly consumers: Locator;
     readonly table: TableComponent;
     readonly meterrecords : Locator;
+    readonly communication: Locator;
+    readonly noncommunication: Locator;
+    readonly graph: Locator;
+    readonly chartcanvas : Locator;
+    readonly tooltip : Locator;
 
     // Values inside cards
     constructor(page: Page) {
         this.page = page;
-
+        this.communication = this.page.locator('svg text').filter({ hasText: /^Communicating:/ });
+        this.noncommunication = this.page.locator('svg text').filter({ hasText: /^Non-Communicating:/ });
         // headings (stable)
         this.totalConsumersCard = page.getByRole('heading', { name: 'Total Consumers' });
         this.highUsageCard = page.getByRole('heading', { name: 'High-Usage Consumers' });
@@ -98,6 +105,9 @@ export class DashboardPage {
         this.consumers = this.page.locator('nav').locator('li', { hasText: 'Consumers' });
         this.table = new TableComponent(page, page.locator('table'));
         this.meterrecords = this.page.locator('table');
+        this.graph = this.page.locator('.echarts-for-react').first();
+        this.chartcanvas = this.page.locator('.echarts-for-react canvas');
+        this.tooltip = this.page.locator('span:has-text("kVAh")').last();
   
     }
 
@@ -214,5 +224,56 @@ export class DashboardPage {
     }
     async getHighUsageConsumers() {
         return Number(await this.highUsageValue.textContent());
+    }
+    async getCommunicatingMeters(){
+         const text = await this.communication.textContent();
+        return Number((text ?? '').match(/\d+/)?.[0]);
+    }
+    async getNonCommunicatingMeters(){
+        const text = await this.noncommunication.textContent();
+        return Number((text ?? '').match(/\d+/)?.[0]);
+    }
+    async GraphisLoaded(){
+        await expect(this.graph).toBeVisible();
+        await expect(this.chartcanvas).toBeVisible();
+    }
+    async Hover(){
+        await this.chartcanvas.hover;
+    }
+    async ValidateGraph(){
+          await expect(this.graph).toBeVisible();
+          await this.chartcanvas.hover();
+          await expect(this.tooltip).toBeVisible();
+    }
+    async printTooltipValue(){
+    await this.chartcanvas.hover();
+    const tooltipText = await this.page.locator('span:has-text("kVAh")').last().textContent();
+    console.log("Energy Tooltip Value:", tooltipText);
+    }
+
+
+    async collectAllGraphValues() {
+    const canvas = this.chartcanvas;
+    const box = await canvas.boundingBox();
+    if (!box) throw new Error("Canvas not found");
+    const bars = 90;
+    const step = box.width / bars;
+    const values:any[] = [];
+    for (let i = 0; i < bars; i++) {
+        const x = box.x + step * i;
+        const y = box.y + box.height / 2;
+        await this.page.mouse.move(x, y);
+        await this.page.waitForTimeout(300);
+        const tooltipLocator = this.page.locator('span')
+          .filter({ hasText: /\d+\.\d+\s*kVAh/ })
+          .first();
+        const count = await tooltipLocator.count();
+        if (count > 0) {
+            const value = await tooltipLocator.textContent();
+            values.push(value);
+            console.log("Bar value:", value);
+        }
+    }
+    return values;
     }
 }

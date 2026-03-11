@@ -1,0 +1,9 @@
+API response: {"success":true,"message":"Login successful","data":{"user":{"id":1,"username":"GMR_Admin","email":"madhu.bestinfra@gmail.com","firstName":"GMR","lastName":"Project","role":"Admin","roles":["Admin"],"permissions":["consumer","asset_management","user_management_default","users","role_management","meter_management","meter_list","tickets","bills","postpaid","consumer_dashboard","dashboard","rtc"],"accessLevel":"NORMAL","locationId":null,"location":null},"gmrAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJzdWItYXBwIiwicm9sZXMiOlsiQWRtaW4iXSwicGVybWlzc2lvbnMiOlsiY29uc3VtZXIiLCJhc3NldF9tYW5hZ2VtZW50IiwidXNlcl9tYW5hZ2VtZW50X2RlZmF1bHQiLCJ1c2VycyIsInJvbGVfbWFuYWdlbWVudCIsIm1ldGVyX21hbmFnZW1lbnQiLCJtZXRlcl9saXN0IiwidGlja2V0cyIsImJpbGxzIiwicG9zdHBhaWQiLCJjb25zdW1lcl9kYXNoYm9hcmQiLCJkYXNoYm9hcmQiLCJydGMiXSwibG9jYXRpb25JZCI6bnVsbCwiaWF0IjoxNzczMTIwNzkzLCJleHAiOjE3NzMxMjQzOTN9.70Y-sRxjgHDMqe_GtJygIVlNTFwICNSjKcPMqYdDtJY","gmrRefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzczMTIwNzkzLCJleHAiOjE3NzU3MTI3OTN9.vgas9nOffjwUmUNG1cHOlu9AV_jLj1zfvHn38BAqpfI"}}
+{
+  success: false,
+  message: 'Invalid data type: consumer. Supported types: all-consumers, high-usage, electricity-usage, electricity-usage-daily, electricity-usage-monthly, chart-daily-consumption, chart-monthly-consumption, communicating, non-communicating'
+}
+{
+  success: false,
+  message: 'Invalid data type: consumer. Supported types: all-consumers, high-usage, electricity-usage, electricity-usage-daily, electricity-usage-monthly, chart-daily-consumption, chart-monthly-consumption, communicating, non-communicating'
+}

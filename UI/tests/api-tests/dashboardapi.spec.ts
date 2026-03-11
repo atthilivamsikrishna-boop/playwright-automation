@@ -2,10 +2,11 @@ import { test, expect } from 'UI/Fixtures/page';
 import { DashboardPage } from 'UI/Pages/dashboard'
 import { DashboardApi } from 'UI/Services/dashboardapi'
 import { ApiValidator } from 'UI/util/apivalidator';
+import data from 'UI/Test-data/consumerdates.json'
 
 test('TC1 - Dashboard validation', async ({ page, dashboardPage, dashboardapi }) => {
     await page.goto('/');
-    const api = await dashboardapi.getDashboardStats();
+    const api = await dashboardapi.GetDashboardstats();
     const totalUI = await dashboardPage.getTotalConsumers();
     const highUsageUI = await dashboardPage.getHighUsageConsumers();
     console.log('------------- API DATA -------------');
@@ -23,30 +24,45 @@ test('TC1 - Dashboard validation', async ({ page, dashboardPage, dashboardapi })
 });
 test('TC2 - Table Validation', async ({ page, dashboardapi, dashboardPage, }) => {
     await page.goto('/');
-    const api = await dashboardapi.getTableRecords();
+    const api = await dashboardapi.getTamperEvents();
     console.log(api);
     ApiValidator.validatePagination(api.pagination);
     ApiValidator.validateSuccess(api);
     ApiValidator.validateArray(api.data);
     expect(api.data.length).toBe(api.pagination.totalCount);
 });
-test('TC3 - UI data should match API', async ({ page, request, dashboardapi, dashboardPage }) => {
-    await page.goto('');
-    const api = await dashboardapi.getTableRecords();
-    const ui = await dashboardPage.table.getAllPagesData();
-    expect(ui.length).toBe(api.data.length);
+test('TC3 - UI data should match API', async ({ page, dashboardapi, dashboardPage }) => {
+  await page.goto('/');
+
+  const api = await dashboardapi.getMeterStatus();
+  const communicatingAPI =
+    api.data.find((x:any) => x.name === "Communicating")?.value || 0;
+  const nonCommunicatingAPI =
+    api.data.find((x:any) => x.name === "Non-Communicating")?.value || 0;
+  const communicatingUI =
+    await dashboardPage.getCommunicatingMeters();
+  const nonCommunicatingUI =
+    await dashboardPage.getNonCommunicatingMeters();
+  expect(communicatingUI).toBe(communicatingAPI);
+  expect(nonCommunicatingUI).toBe(nonCommunicatingAPI);
+
 });
-test('TC4 - wigdet all of consumers', async ({ page, request, dashboardapi, dashboardPage }) => {
+test('TC4 - wigdet all of consumers', async ({ page, request, dashboardapi, dashboardPage, consumerpage }) => {
     await page.goto('/');
-    const api = await dashboardapi.getwigdetsrecords();
+    await dashboardPage.navigatetoconsumers();
+    const startDate = data.consumer.Startdate;
+    const range = data.consumer.Range;
+    const type = "all-consumer";
+    const api = await dashboardapi.getWidgetData(startDate, range, "all-consumers");;
+    console.log(api);
     console.log(api);
     expect(api.success).toBe(true);
     expect(api.message).toContain('retrieved');
-    expect(api.data.length).toBe(api.pagination.totalCount);
+    expect(api.pagination.totalCount).toBeGreaterThanOrEqual(api.data.length);
 });
 test('TC5 - Validate the Total Meter Events', async ({ page, request, dashboardapi, dashboardPage, }) => {
     await page.goto('/');
-    const api = await dashboardapi.getMeterEvent();
+    const api = await dashboardapi.getTamperEvents();
     console.log(api);
     expect(api.success).toBe(true);
     expect(api.data.length).toBe(api.pagination.totalCount);
@@ -58,7 +74,7 @@ test('TC5 - Validate the Total Meter Events', async ({ page, request, dashboarda
 });
 test('TC6 - Validate the Tariff', async ({ page, dashboardapi, request, dashboardPage }) => {
     await page.goto('/');
-    const api = await dashboardapi.Trariff();
+    const api = await dashboardapi.getTariff();
     console.log(api);
     ApiValidator.validateArray(api);
     ApiValidator.validateFields(api[0], ['id', 'name', 'category', 'type', 'slabs', 'minDemand', 'maxDemand', 'valid_from']);
@@ -72,7 +88,7 @@ test('TC6 - Validate the Tariff', async ({ page, dashboardapi, request, dashboar
 });
 test('TC7 - Validate the Monthly and Daily Consumption', async ({ page, request, dashboardPage, dashboardapi }) => {
     await page.goto('/');
-    const api = await dashboardapi.Graph();
+    const api = await dashboardapi.getGraphAnalytics();
     console.log(api);
     expect(api.data).toHaveProperty('monthly');
     expect(api.data).toHaveProperty('seriesColors');

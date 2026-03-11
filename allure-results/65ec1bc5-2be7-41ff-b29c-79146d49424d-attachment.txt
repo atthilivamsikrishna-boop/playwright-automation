@@ -1,0 +1,3 @@
+Login username: GMR_Admin
+Login password: Be$t@123
+API response: {"success":false,"message":"Username/email and password are required"}

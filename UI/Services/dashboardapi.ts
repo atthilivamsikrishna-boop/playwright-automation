@@ -1,31 +1,58 @@
-import { APIRequestContext, Page } from "@playwright/test";
+import { APIRequestContext } from "@playwright/test";
+import { DASHBOARD_ENDPOINTS } from "./Endpoints/Dashboardendpoints";
 
 export class DashboardApi {
-  constructor(private request: APIRequestContext, page: Page) { }
+  private headers: Record<string, string> = {};
 
-  async getDashboardStats() {
-    const response = await this.request.get(process.env.API_URL!);
-    return response.json();
-  }
-  async getTableRecords() {
-    const response = await this.request.get(process.env.TABLE_API_URL!);
-    return response.json();
-  }
-  async getwigdetsrecords() {
-    const response = await this.request.get(process.env.WIDGET_URL!);
-    return response.json();
-  }
-  async getMeterEvent() {
-    const response = await this.request.get(process.env.METER_EVENT!);
-    return response.json();
-  }
-  async Trariff(){
-    const response = await this.request.get(process.env.TARIFF_URL!);
-    return response.json();
-  }
-  async Graph(){
-    const response = await this.request.get(process.env.GRAPH_URL!);
-    return response.json();
+  constructor(private request: APIRequestContext, token?: string) {
+    if (token) this.setToken(token);
   }
 
+  setToken(token: string) {
+    this.headers = { Authorization: `Bearer ${token}` };
+  }
+
+  private async get(endpoint: string) {
+    const response = await this.request.get(endpoint, { headers: this.headers });
+    if (!response.ok()) {
+      const text = await response.text();
+      throw new Error(`API call failed: ${response.status()} \n${text}`);
+    }
+    return response.json();
+  }
+  async GetDashboardstats(){
+    const reponse = await this.request.get(`${process.env.API_BASE_URL}/api/dashboard`);
+    return reponse.json();
+  }
+
+  // Latest tamper events with dynamic pagination
+  async getTamperEvents(page = 1, limit = 20) {
+    const endpoint = `${process.env.API_BASE_URL}/api/dashboard/latest-tamper-events?page=${page}&limit=${limit}`;
+    return this.get(endpoint);
+  }
+
+  // Meter status
+  async getMeterStatus() {
+    const response = await this.request.get(`${process.env.API_BASE_URL}/api/consumers/meter-status`);
+    return response.json();
+  }
+
+  // Graph analytics
+  async getGraphAnalytics() {
+    const endpoint = `${process.env.API_BASE_URL}/api/dashboard/graph-analytics`;
+    return this.get(endpoint);
+  }
+
+  // Tariff
+  async getTariff() {
+    const endpoint = `${process.env.API_BASE_URL}/api/dashboard/tariff`;
+    return this.get(endpoint);
+  }
+
+  // Widget data — you can add query params dynamically if needed
+  async getWidgetData(startDate: string, endDate: string, data: string) {
+
+    const response =await this.request.get(`${process.env.API_BASE_URL}/api/dashboard/widget-data?startDate=${startDate}&endDate=${endDate}&data=${data}`);
+    return response.json();
+  }
 }

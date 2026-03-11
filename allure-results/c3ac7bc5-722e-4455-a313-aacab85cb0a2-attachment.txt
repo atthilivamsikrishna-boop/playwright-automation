@@ -1,0 +1,10 @@
+{
+  'S.No': '1',
+  'Meter SI No': 'X2091454',
+  'Consumer Name': 'Delhi Public School',
+  'Event Date Time': 'Mar 11, 2026, 11:47 AM',
+  'Event Description': 'RTC Change',
+  Status: 'Active',
+  Duration: '6h 2m',
+  Actions: ''
+}

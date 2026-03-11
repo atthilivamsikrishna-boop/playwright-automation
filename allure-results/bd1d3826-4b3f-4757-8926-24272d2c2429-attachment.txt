@@ -1,0 +1,8 @@
+{
+  success: true,
+  data: [
+    { value: 15, name: 'Communicating' },
+    { value: 4, name: 'Non-Communicating' }
+  ],
+  message: 'Meter status retrieved successfully'
+}

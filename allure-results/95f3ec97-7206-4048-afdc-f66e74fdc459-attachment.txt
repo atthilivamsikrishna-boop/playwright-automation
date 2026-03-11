@@ -1,0 +1,211 @@
+API response: {"success":true,"message":"Login successful","data":{"user":{"id":1,"username":"GMR_Admin","email":"madhu.bestinfra@gmail.com","firstName":"GMR","lastName":"Project","role":"Admin","roles":["Admin"],"permissions":["consumer","asset_management","user_management_default","users","role_management","meter_management","meter_list","tickets","bills","postpaid","consumer_dashboard","dashboard","rtc"],"accessLevel":"NORMAL","locationId":null,"location":null},"gmrAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJzdWItYXBwIiwicm9sZXMiOlsiQWRtaW4iXSwicGVybWlzc2lvbnMiOlsiY29uc3VtZXIiLCJhc3NldF9tYW5hZ2VtZW50IiwidXNlcl9tYW5hZ2VtZW50X2RlZmF1bHQiLCJ1c2VycyIsInJvbGVfbWFuYWdlbWVudCIsIm1ldGVyX21hbmFnZW1lbnQiLCJtZXRlcl9saXN0IiwidGlja2V0cyIsImJpbGxzIiwicG9zdHBhaWQiLCJjb25zdW1lcl9kYXNoYm9hcmQiLCJkYXNoYm9hcmQiLCJydGMiXSwibG9jYXRpb25JZCI6bnVsbCwiaWF0IjoxNzczMTIyMDk0LCJleHAiOjE3NzMxMjU2OTR9.W6o6DueVQDwjygVkfw6GnnbBXtMpodjf7CgSEsSbnE0","gmrRefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzczMTIyMDk0LCJleHAiOjE3NzU3MTQwOTR9.jBwRNL3ukItqwium9m387BRXWVSFZIWUZHKam2sQDtM"}}
+UI DATA: [
+  {
+    'S.No': 'NA',
+    'Meter SI No': 'MTR001234',
+    'Consumer Name': 'ABC Industries',
+    'Event Date Time': 'Jan 15, 2025, 8:00 PM',
+    'Event Description': 'Meter Tampering Detected',
+    Status: 'Active',
+    Duration: '418d 15h 25m',
+    Actions: ''
+  },
+  {
+    'S.No': 'NA',
+    'Meter SI No': 'MTR001235',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 10, 2026, 4:04 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Active',
+    Duration: '7h 21m',
+    Actions: ''
+  },
+  {
+    'S.No': '3',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 4:03 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 17m',
+    Actions: ''
+  },
+  {
+    'S.No': '4',
+    'Meter SI No': '18132429',
+    'Consumer Name': 'GMR AERO TOWER 2 INCOMER',
+    'Event Date Time': 'Mar 10, 2026, 3:51 AM',
+    'Event Description': 'B_PH CT Open',
+    Status: 'Active',
+    Duration: '7h 34m',
+    Actions: ''
+  },
+  {
+    'S.No': '5',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 3:45 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 3m',
+    Actions: ''
+  },
+  {
+    'S.No': '6',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 10, 2026, 3:37 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 22m',
+    Actions: ''
+  },
+  {
+    'S.No': '7',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 3:34 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 8m',
+    Actions: ''
+  },
+  {
+    'S.No': '8',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 10, 2026, 3:19 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 13m',
+    Actions: ''
+  },
+  {
+    'S.No': '9',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 3:06 AM',
+    'Event Description': 'Y_PH CT Open',
+    Status: 'Active',
+    Duration: '8h 19m',
+    Actions: ''
+  },
+  {
+    'S.No': '10',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 3:05 AM',
+    'Event Description': 'B_PH CT Open',
+    Status: 'Active',
+    Duration: '8h 20m',
+    Actions: ''
+  },
+  {
+    'S.No': '6',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 10, 2026, 3:37 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 22m',
+    Actions: ''
+  },
+  {
+    'S.No': '7',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 10, 2026, 3:34 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 8m',
+    Actions: ''
+  },
+  {
+    'S.No': '8',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 10, 2026, 3:19 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 30m',
+    Actions: ''
+  },
+  {
+    'S.No': '14',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 9, 2026, 10:46 PM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '4h 28m',
+    Actions: ''
+  },
+  {
+    'S.No': '15',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 9, 2026, 10:32 PM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 12m',
+    Actions: ''
+  },
+  {
+    'S.No': '11',
+    'Meter SI No': '18132429',
+    'Consumer Name': 'GMR AERO TOWER 2 INCOMER',
+    'Event Date Time': 'Mar 10, 2026, 2:04 AM',
+    'Event Description': 'B_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 31m',
+    Actions: ''
+  },
+  {
+    'S.No': '12',
+    'Meter SI No': '18132429',
+    'Consumer Name': 'GMR AERO TOWER 2 INCOMER',
+    'Event Date Time': 'Mar 10, 2026, 1:39 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '2h 52m',
+    Actions: ''
+  },
+  {
+    'S.No': '18',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 9, 2026, 6:03 AM',
+    'Event Description': 'Y_PH CT Open',
+    Status: 'Resolved',
+    Duration: '2h 52m',
+    Actions: ''
+  },
+  {
+    'S.No': '19',
+    'Meter SI No': '24021328',
+    'Consumer Name': 'Arena',
+    'Event Date Time': 'Mar 9, 2026, 5:59 AM',
+    'Event Description': 'B_PH CT Open',
+    Status: 'Resolved',
+    Duration: '10h 9m',
+    Actions: ''
+  },
+  {
+    'S.No': '20',
+    'Meter SI No': '23010551',
+    'Consumer Name': 'Schneider Electric',
+    'Event Date Time': 'Mar 9, 2026, 4:43 AM',
+    'Event Description': 'R_PH CT Open',
+    Status: 'Resolved',
+    Duration: '0h 46m',
+    Actions: ''
+  }
+]
+API DATA: {
+  success: true,
+  data: [
+    { value: 16, name: 'Communicating' },
+    { value: 3, name: 'Non-Communicating' }
+  ],
+  message: 'Meter status retrieved successfully'
+}

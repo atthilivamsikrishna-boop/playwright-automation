@@ -1,0 +1,36 @@
+API response: {"success":true,"message":"Login successful","data":{"user":{"id":1,"username":"GMR_Admin","email":"madhu.bestinfra@gmail.com","firstName":"GMR","lastName":"Project","role":"Admin","roles":["Admin"],"permissions":["consumer","asset_management","user_management_default","users","role_management","meter_management","meter_list","tickets","bills","postpaid","consumer_dashboard","dashboard","rtc"],"accessLevel":"NORMAL","locationId":null,"location":null},"gmrAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJzdWItYXBwIiwicm9sZXMiOlsiQWRtaW4iXSwicGVybWlzc2lvbnMiOlsiY29uc3VtZXIiLCJhc3NldF9tYW5hZ2VtZW50IiwidXNlcl9tYW5hZ2VtZW50X2RlZmF1bHQiLCJ1c2VycyIsInJvbGVfbWFuYWdlbWVudCIsIm1ldGVyX21hbmFnZW1lbnQiLCJtZXRlcl9saXN0IiwidGlja2V0cyIsImJpbGxzIiwicG9zdHBhaWQiLCJjb25zdW1lcl9kYXNoYm9hcmQiLCJkYXNoYm9hcmQiLCJydGMiXSwibG9jYXRpb25JZCI6bnVsbCwiaWF0IjoxNzczMDYyODUzLCJleHAiOjE3NzMwNjY0NTN9.fKFWsU-6839VfE80Ni_md1RQPC4_qQW0Alp9zZUu0yo","gmrRefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzczMDYyODUzLCJleHAiOjE3NzU2NTQ4NTN9.80-bOA-rqc0T-lHh8Xr37jcGi5AhIescywOg6rOWdYw"}}
+[
+  {
+    id: 3,
+    name: 'HT 33KV',
+    category: 'INDUSTRIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  },
+  {
+    id: 1,
+    name: 'HT 33KV',
+    category: 'COMMERCIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  },
+  {
+    id: 2,
+    name: 'HT 11KV',
+    category: 'COMMERCIAL',
+    type: 'postpaid',
+    slabs: [ [Object] ],
+    minDemand: 0,
+    maxDemand: 999999,
+    valid_from: '2024-01-01T00:00:00.000Z',
+    valid_to: null
+  }
+]

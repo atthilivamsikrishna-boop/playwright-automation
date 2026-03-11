@@ -1,0 +1,12 @@
+API response: {"success":true,"message":"Login successful","data":{"user":{"id":1,"username":"GMR_Admin","email":"madhu.bestinfra@gmail.com","firstName":"GMR","lastName":"Project","role":"Admin","roles":["Admin"],"permissions":["consumer","asset_management","user_management_default","users","role_management","meter_management","meter_list","tickets","bills","postpaid","consumer_dashboard","dashboard","rtc"],"accessLevel":"NORMAL","locationId":null,"location":null},"gmrAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJzdWItYXBwIiwicm9sZXMiOlsiQWRtaW4iXSwicGVybWlzc2lvbnMiOlsiY29uc3VtZXIiLCJhc3NldF9tYW5hZ2VtZW50IiwidXNlcl9tYW5hZ2VtZW50X2RlZmF1bHQiLCJ1c2VycyIsInJvbGVfbWFuYWdlbWVudCIsIm1ldGVyX21hbmFnZW1lbnQiLCJtZXRlcl9saXN0IiwidGlja2V0cyIsImJpbGxzIiwicG9zdHBhaWQiLCJjb25zdW1lcl9kYXNoYm9hcmQiLCJkYXNoYm9hcmQiLCJydGMiXSwibG9jYXRpb25JZCI6bnVsbCwiaWF0IjoxNzczMTI0MTY0LCJleHAiOjE3NzMxMjc3NjR9.5DXvrUvoL6EHEElwngCmHawmkXoZV1y19hwbyRlOzK8","gmrRefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzczMTI0MTY0LCJleHAiOjE3NzU3MTYxNjR9.f5vqL9Mfoob7rrYP1Utu-gnT44A4S32QPkx6ncIw4NU"}}
+------------- API DATA -------------
+{
+  "totalConsumers": 19,
+  "activeConsumers": 16,
+  "inactiveConsumers": 3,
+  "highUsageConsumers": 0,
+  "highUsageMeterIds": [],
+  "averageConsumption": "0.00"
+}
+------------- UI DATA -------------
+{ totalConsumers: 19, highUsageConsumers: 0 }

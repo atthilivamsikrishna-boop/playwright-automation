@@ -1,0 +1,286 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation "Main navigation" [ref=e5]:
+    - generic [ref=e6]:
+      - generic "Go to home page" [ref=e8] [cursor=pointer]:
+        - img "Company Logo" [ref=e9]
+      - main [ref=e10]:
+        - region "GENERAL" [ref=e11]:
+          - heading "GENERAL" [level=2] [ref=e12]
+          - list [ref=e13]:
+            - listitem [ref=e14]:
+              - generic [ref=e16] [cursor=pointer]:
+                - img [ref=e18]
+                - generic [ref=e20]: Dashboard
+            - listitem [ref=e21]:
+              - generic [ref=e23] [cursor=pointer]:
+                - img [ref=e25]
+                - generic [ref=e27]: Consumers
+            - listitem [ref=e28]:
+              - generic [ref=e29]:
+                - generic [ref=e31] [cursor=pointer]:
+                  - img [ref=e33]
+                  - generic [ref=e34]:
+                    - generic [ref=e35]: Bills
+                    - img [ref=e37]
+                - list:
+                  - listitem [ref=e39]:
+                    - button "Postpaid" [ref=e41] [cursor=pointer]
+            - listitem [ref=e42]:
+              - generic [ref=e44] [cursor=pointer]:
+                - img [ref=e46]
+                - generic [ref=e48]: Tickets
+            - listitem [ref=e49]:
+              - generic [ref=e51] [cursor=pointer]:
+                - img [ref=e53]
+                - generic [ref=e55]: Asset Management
+            - listitem [ref=e56]:
+              - generic [ref=e58] [cursor=pointer]:
+                - img [ref=e60]
+                - generic [ref=e62]: Meter RTC
+            - listitem [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e66] [cursor=pointer]:
+                  - img [ref=e68]
+                  - generic [ref=e69]:
+                    - generic [ref=e70]: User Management
+                    - img [ref=e72]
+                - list:
+                  - listitem [ref=e74]:
+                    - button "Users" [ref=e76] [cursor=pointer]
+                  - listitem [ref=e77]:
+                    - button "Role Management" [ref=e79] [cursor=pointer]
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - img [ref=e83]
+        - paragraph [ref=e84]: Client Information
+      - generic [ref=e85]:
+        - paragraph [ref=e86]:
+          - generic [ref=e87]: © 2026 Best Infra Pvt. Ltd.
+        - generic "Toggle dark mode" [ref=e88] [cursor=pointer]:
+          - img [ref=e89]
+  - generic [ref=e90]:
+    - banner [ref=e91]:
+      - navigation [ref=e92]:
+        - figure "Toggle sidebar" [ref=e93] [cursor=pointer]:
+          - img "Collapse Sidebar" [ref=e94]
+        - heading "Dashboard" [level=1] [ref=e95]
+      - region "Search section" [ref=e96]:
+        - generic [ref=e98]:
+          - searchbox "Search" [ref=e99]
+          - img "Search" [ref=e102]
+          - generic [ref=e104]:
+            - generic [ref=e105]: Ctrl
+            - generic [ref=e106]: +
+            - generic [ref=e107]: K
+      - navigation "User actions" [ref=e108]:
+        - figure "Tariff Details" [ref=e109] [cursor=pointer]:
+          - img "Tariff icon" [ref=e110]
+        - figure "Toggle full screen" [ref=e111] [cursor=pointer]:
+          - img "Maximize icon" [ref=e112]
+        - figure "Notifications" [ref=e114] [cursor=pointer]:
+          - img "Notifications" [ref=e115]
+        - figure "Profile" [ref=e117] [cursor=pointer]:
+          - img "GMR Client" [ref=e118]
+    - main [ref=e119]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e124]:
+            - heading "Consumer Statistics (Mar 11, 2026)" [level=2] [ref=e128]
+            - generic [ref=e131]:
+              - generic [ref=e132] [cursor=pointer]:
+                - generic [ref=e133]:
+                  - heading "Total Consumers" [level=3] [ref=e135]
+                  - paragraph [ref=e136]: "19"
+                - figure [ref=e137]:
+                  - img "Total Consumers Icon" [ref=e138]
+              - generic [ref=e139]:
+                - paragraph [ref=e140]: 15 Communicating
+                - paragraph [ref=e141]: 4 Non-Communicating
+            - generic [ref=e144]:
+              - generic [ref=e145] [cursor=pointer]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - heading "High-Usage Consumers" [level=3] [ref=e148]
+                    - button "Information" [ref=e150]:
+                      - img "Info" [ref=e151]
+                  - paragraph [ref=e152]: "0"
+                - figure [ref=e153]:
+                  - img "High-Usage Consumers Icon" [ref=e154]
+              - paragraph [ref=e156]: Exceeding Max Demand
+          - generic [ref=e158]:
+            - generic [ref=e160]:
+              - heading "Consumption & Billing (Mar 10, 2026)" [level=2] [ref=e162]
+              - generic [ref=e164]:
+                - generic [ref=e166] [cursor=pointer]: Daily
+                - generic [ref=e167] [cursor=pointer]: Monthly
+            - generic [ref=e170]:
+              - generic [ref=e171] [cursor=pointer]:
+                - generic [ref=e172]:
+                  - heading "Electricity Usage (kVAh)" [level=3] [ref=e174]
+                  - paragraph [ref=e175]:
+                    - text: 24,655
+                    - img "Trending Down" [ref=e176]
+                - figure [ref=e177]:
+                  - img "Electricity Usage (kVAh) Icon" [ref=e178]
+              - paragraph [ref=e180]: 50,525 kVAh
+            - generic [ref=e183]:
+              - generic [ref=e184] [cursor=pointer]:
+                - generic [ref=e185]:
+                  - generic [ref=e186]:
+                    - heading "Electricity Charges (Tentative)" [level=3] [ref=e187]
+                    - button "Information" [ref=e189]:
+                      - img "Info" [ref=e190]
+                  - paragraph [ref=e191]:
+                    - text: ₹24,20,000.00
+                    - img "Trending Down" [ref=e192]
+                - figure [ref=e193]:
+                  - img "Electricity Charges (Tentative) Icon"
+              - paragraph [ref=e195]: ₹64,60,000.00
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - heading "Daily Energy Consumption (kVAh) (Jan 07 - Mar 10)" [level=3] [ref=e201]
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - generic [ref=e205] [cursor=pointer]: Daily
+                - generic [ref=e206] [cursor=pointer]: Monthly
+              - button "Graph View" [ref=e207] [cursor=pointer]:
+                - img "Graph View" [ref=e208]
+              - button "Table View" [ref=e209] [cursor=pointer]:
+                - img "Table View" [ref=e210]
+              - button "Download" [ref=e212] [cursor=pointer]:
+                - img "Download" [ref=e213]
+          - img "Energy consumption chart showing daily and monthly data in kWh" [ref=e215]
+        - generic [ref=e219]:
+          - generic [ref=e223]:
+            - generic [ref=e224]:
+              - heading "Meters Communication Status" [level=3] [ref=e225]
+              - button "Download" [ref=e228] [cursor=pointer]:
+                - img "Download" [ref=e229]
+            - img "pie radius chart" [ref=e231]:
+              - img [ref=e235]:
+                - generic [ref=e237]:
+                  - generic [ref=e239]: "19"
+                  - generic [ref=e243]:
+                    - generic [ref=e245]: "Communicating: 15 (78.9%)"
+                    - generic [ref=e248]: "Non-Communicating: 4 (21.1%)"
+                  - generic [ref=e251]: 1/2
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]: Meter Latest Events
+              - button "Download table data" [ref=e260]:
+                - img "Download Excel" [ref=e261]
+            - generic [ref=e263]:
+              - generic [ref=e265]:
+                - generic [ref=e266]:
+                  - textbox "Search by Meter SI No or Consumer Name..." [ref=e267]
+                  - img "search" [ref=e269]
+                - generic [ref=e272]:
+                  - combobox [expanded] [active] [ref=e273] [cursor=pointer]:
+                    - generic [ref=e274]: All Meters
+                    - img [ref=e275]
+                  - listbox [ref=e277]:
+                    - generic [ref=e278]:
+                      - generic [ref=e280] [cursor=pointer]: All Meters
+                      - generic [ref=e282] [cursor=pointer]: "18132429"
+                      - generic [ref=e284] [cursor=pointer]: "24021328"
+                      - generic [ref=e286] [cursor=pointer]: MTR001234
+                      - generic [ref=e288] [cursor=pointer]: MTR001235
+                      - generic [ref=e290] [cursor=pointer]: MTR001236
+                      - generic [ref=e292] [cursor=pointer]: MTR001237
+                      - generic [ref=e294] [cursor=pointer]: MTR001238
+              - grid "Data Table" [ref=e297]:
+                - rowgroup [ref=e298]:
+                  - row "S.No Meter SI No Consumer Name Event Date Time Event Description Status Duration Actions" [ref=e299]:
+                    - columnheader "S.No" [ref=e300] [cursor=pointer]
+                    - columnheader "Meter SI No" [ref=e301] [cursor=pointer]
+                    - columnheader "Consumer Name" [ref=e302] [cursor=pointer]
+                    - columnheader "Event Date Time" [ref=e303] [cursor=pointer]
+                    - columnheader "Event Description" [ref=e304] [cursor=pointer]
+                    - columnheader "Status" [ref=e305] [cursor=pointer]
+                    - columnheader "Duration" [ref=e306] [cursor=pointer]
+                    - columnheader "Actions" [ref=e307]
+                - rowgroup [ref=e308]:
+                  - button "1 X2091454 Delhi Public School Mar 11, 2026, 11:47 AM RTC Change Active status Active 6h 10m View" [ref=e309] [cursor=pointer]:
+                    - gridcell "1" [ref=e310]
+                    - gridcell "X2091454" [ref=e311]
+                    - gridcell "Delhi Public School" [ref=e312]
+                    - gridcell "Mar 11, 2026, 11:47 AM" [ref=e313]
+                    - gridcell "RTC Change" [ref=e314]
+                    - gridcell "Active status Active" [ref=e315]:
+                      - generic [ref=e316]:
+                        - img "Active status" [ref=e317]
+                        - generic [ref=e318]: Active
+                    - gridcell "6h 10m" [ref=e319]
+                    - gridcell "View" [ref=e320]:
+                      - generic "View" [ref=e322]:
+                        - img "View" [ref=e323]
+                  - button "2 18132429 GMR AERO TOWER 2 INCOMER Mar 11, 2026, 6:30 AM Y_PH CT Open Resolved status Resolved 0h 12m View" [ref=e324] [cursor=pointer]:
+                    - gridcell "2" [ref=e325]
+                    - gridcell "18132429" [ref=e326]
+                    - gridcell "GMR AERO TOWER 2 INCOMER" [ref=e327]
+                    - gridcell "Mar 11, 2026, 6:30 AM" [ref=e328]
+                    - gridcell "Y_PH CT Open" [ref=e329]
+                    - gridcell "Resolved status Resolved" [ref=e330]:
+                      - generic [ref=e331]:
+                        - img "Resolved status" [ref=e332]
+                        - generic [ref=e333]: Resolved
+                    - gridcell "0h 12m" [ref=e334]
+                    - gridcell "View" [ref=e335]:
+                      - generic "View" [ref=e337]:
+                        - img "View" [ref=e338]
+                  - button "3 18132429 GMR AERO TOWER 2 INCOMER Mar 11, 2026, 1:31 AM R_PH CT Open Resolved status Resolved 4h 20m View" [ref=e339] [cursor=pointer]:
+                    - gridcell "3" [ref=e340]
+                    - gridcell "18132429" [ref=e341]
+                    - gridcell "GMR AERO TOWER 2 INCOMER" [ref=e342]
+                    - gridcell "Mar 11, 2026, 1:31 AM" [ref=e343]
+                    - gridcell "R_PH CT Open" [ref=e344]
+                    - gridcell "Resolved status Resolved" [ref=e345]:
+                      - generic [ref=e346]:
+                        - img "Resolved status" [ref=e347]
+                        - generic [ref=e348]: Resolved
+                    - gridcell "4h 20m" [ref=e349]
+                    - gridcell "View" [ref=e350]:
+                      - generic "View" [ref=e352]:
+                        - img "View" [ref=e353]
+                  - button "4 18132429 GMR AERO TOWER 2 INCOMER Mar 11, 2026, 12:48 AM Y_PH CT Open Resolved status Resolved 5h 22m View" [ref=e354] [cursor=pointer]:
+                    - gridcell "4" [ref=e355]
+                    - gridcell "18132429" [ref=e356]
+                    - gridcell "GMR AERO TOWER 2 INCOMER" [ref=e357]
+                    - gridcell "Mar 11, 2026, 12:48 AM" [ref=e358]
+                    - gridcell "Y_PH CT Open" [ref=e359]
+                    - gridcell "Resolved status Resolved" [ref=e360]:
+                      - generic [ref=e361]:
+                        - img "Resolved status" [ref=e362]
+                        - generic [ref=e363]: Resolved
+                    - gridcell "5h 22m" [ref=e364]
+                    - gridcell "View" [ref=e365]:
+                      - generic "View" [ref=e367]:
+                        - img "View" [ref=e368]
+                  - button "5 18132429 GMR AERO TOWER 2 INCOMER Mar 11, 2026, 12:38 AM B_PH CT Open Resolved status Resolved 6h 34m View" [ref=e369] [cursor=pointer]:
+                    - gridcell "5" [ref=e370]
+                    - gridcell "18132429" [ref=e371]
+                    - gridcell "GMR AERO TOWER 2 INCOMER" [ref=e372]
+                    - gridcell "Mar 11, 2026, 12:38 AM" [ref=e373]
+                    - gridcell "B_PH CT Open" [ref=e374]
+                    - gridcell "Resolved status Resolved" [ref=e375]:
+                      - generic [ref=e376]:
+                        - img "Resolved status" [ref=e377]
+                        - generic [ref=e378]: Resolved
+                    - gridcell "6h 34m" [ref=e379]
+                    - gridcell "View" [ref=e380]:
+                      - generic "View" [ref=e382]:
+                        - img "View" [ref=e383]
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - combobox [ref=e389] [cursor=pointer]:
+                    - generic [ref=e390]: 5 Per Page
+                    - img [ref=e391]
+                  - generic [ref=e393]: "Total: 20"
+                - generic [ref=e394]:
+                  - button "Previous" [disabled] [ref=e395]
+                  - generic [ref=e396]: Page 1 of 4
+                  - button "Next" [ref=e397] [cursor=pointer]
+```

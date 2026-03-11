@@ -4,8 +4,11 @@ import { DashboardPage } from '../Pages/dashboard';
 import { LogoutPage } from 'UI/Pages/Logout';
 import { ConsumerPage } from 'UI/Pages/consumer';
 import { ConsumersTablesPage } from '../Pages/consumertable';
-import { DashboardApi} from '../Services/dashboardapi'
+import { DashboardApi } from '../Services/dashboardapi'
 import { ConsumerApi } from 'UI/Services/consumerapi';
+import { getAuthTokenFromStorage } from 'UI/util/authtoken';
+import * as dotenv from 'dotenv';
+dotenv.config(); // must be called before accessing process.env
 
 type MyFixtures = {
   loginPage: Loginpage;
@@ -14,7 +17,8 @@ type MyFixtures = {
   consumerpage: ConsumerPage;
   consumertablepage: ConsumersTablesPage;
   dashboardapi: DashboardApi;
-  consumerapi : ConsumerApi;
+  consumerapi: ConsumerApi;
+  authToken: string;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -37,13 +41,37 @@ export const test = base.extend<MyFixtures>({
   consumertablepage: async ({ page }, use) => {
     await use(new ConsumersTablesPage(page));
   },
-   dashboardapi: async ({ request,page }, use) => {
-    await use(new DashboardApi(request,page));
+  authToken: async ({ request }, use) => {
+  const loginUrl = `${process.env.API_BASE_URL}/api/sub-app/auth/login`;
+
+  const response = await request.post(loginUrl, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    data: {
+      identifier: process.env.LOGIN_USERNAME,
+      password: process.env.LOGIN_PASSWORD
+    }
+  });
+
+  const text = await response.text();
+  console.log('API response:', text);
+
+  if (!response.ok()) throw new Error(`API login failed: ${response.status()} \n${text}`);
+
+  const body = JSON.parse(text);
+  await use(body.data.gmrAccessToken);
+},
+  dashboardapi: async ({ request, authToken }, use) => {
+    const api = new DashboardApi(request, authToken);
+    await use(api);
   },
-  consumerapi: async ({ request,page, }, use) => {
-    await use(new ConsumerApi(request,page));
+  consumerapi: async ({ request, page, }, use) => {
+    await use(new ConsumerApi(request, page));
   },
 
 });
 
 export { expect } from '@playwright/test';
+ 

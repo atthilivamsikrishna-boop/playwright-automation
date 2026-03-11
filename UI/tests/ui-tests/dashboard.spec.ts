@@ -44,7 +44,7 @@ test('select the meters option', async ({ page }) => {
 })
 test('dashboard validation', async ({ page, dashboardPage, dashboardapi }) => {
   await page.goto('/');
-  const api = await dashboardapi.getDashboardStats();
+  const api = await dashboardapi.GetDashboardstats();
   const totalUI = await dashboardPage.getTotalConsumers();
   const highUsageUI = await dashboardPage.getHighUsageConsumers();
   console.log('------------- API DATA -------------');
@@ -60,11 +60,6 @@ test('dashboard validation', async ({ page, dashboardPage, dashboardapi }) => {
   expect(api.data).toHaveProperty('dailyStats');
   expect(api.data).toHaveProperty('monthlyStats');
 });
-test('Table Validation',async({page,dashboardapi,dashboardPage,})=> {
-  await page.goto('/');
-  const api = await dashboardapi.getTableRecords();
-  console.log(api);
-})
 test('table should contain all expected headers', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
     await page.goto('/');
     await dashboardPage.table.waitForTable();
@@ -118,5 +113,20 @@ test('Validate the Per Page Dropdown',async({page,dashboardPage})=>{
     await page.goto('/');
     await dashboardPage.selectMeterDropdown(Dropdown);
 })
+test('Validate the Graphs',async({page,dashboardPage})=>{
+  await page.goto('/');
+  await dashboardPage.GraphisLoaded();
+  await dashboardPage.Hover();
+  await dashboardPage.ValidateGraph();
+  const tooltiptext =  await dashboardPage.printTooltipValue();
+  console.log(tooltiptext);
+});
+test("Collect all graph values", async ({ page,dashboardPage }) => {
+    await page.goto('/');
+    await dashboardPage.GraphisLoaded();
+    const graphData = await dashboardPage.collectAllGraphValues();
+    console.log("Graph Data:", graphData);
+
+});
 
 
