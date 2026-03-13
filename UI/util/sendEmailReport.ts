@@ -19,7 +19,7 @@ async function sendEmail() {
 
     const mailOptions = {
         from: "QA Automation",
-        to: "atthilivamsikrishna1@email.com",
+        to: "johnsimon1506@gmail.com",
         subject: "Playwright Automation Test Report",
         text: "Automation execution Failed. Please find the Allure report attached.",
         html: `
