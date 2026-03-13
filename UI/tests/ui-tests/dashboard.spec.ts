@@ -3,9 +3,13 @@ import { test, expect } from 'UI/Fixtures/page';
 import { DashboardPage } from 'UI/Pages/dashboard'
 import { DashboardApi } from 'UI/Services/dashboardapi'
 import { Dropdown } from 'UI/Test-data/metertable.json';
-test('Dashboard loads after auto login', async ({ page }) => {
+import { step } from 'allure-js-commons'
+test('Dashboard loads after auto login', async ({ page,dashboardPage }) => {
   await page.goto('/');
   await expect(page).toHaveURL("https://portal.gmr.bestinfra.app/");
+  const text = await dashboardPage.Logo();
+  console.log(text);
+
 });
 test('Validate dashboard consumer cards', async ({ page }) => {
   await page.goto('/');
@@ -61,72 +65,113 @@ test('dashboard validation', async ({ page, dashboardPage, dashboardapi }) => {
   expect(api.data).toHaveProperty('monthlyStats');
 });
 test('table should contain all expected headers', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
-    await page.goto('/');
-    await dashboardPage.table.waitForTable();
-    const headers = await dashboardPage.table.getHeaders();
-    expect(headers).toEqual([
-        'S.No',
-        'Meter SI No',
-        'Consumer Name',
-        'Event Date Time',
-        'Event Description',
-        'Status',
-        'Duration',
-        'Actions'
-    ]);
-    console.log(headers);
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  const headers = await dashboardPage.table.getHeaders();
+  expect(headers).toEqual([
+    'S.No',
+    'Meter SI No',
+    'Consumer Name',
+    'Event Date Time',
+    'Event Description',
+    'Status',
+    'Duration',
+    'Actions'
+  ]);
+  console.log(headers);
 });
 test('table should have rows', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
-    await page.goto('/');
-    await dashboardPage.table.waitForTable();
-    const count = await dashboardPage.table.getRowCount();
-    expect(count).toBe(5);
-    console.log(count);
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  const count = await dashboardPage.table.getRowCount();
+  expect(count).toBe(5);
+  console.log(count);
 });
 test('Validate Number of Columns in the table.', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
-    await page.goto('/');
-    await dashboardPage.table.waitForTable();
-    const count = await dashboardPage.table.getColumnCount();
-    console.log(count);
-    expect(count).toEqual(8);
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  const count = await dashboardPage.table.getColumnCount();
+  console.log(count);
+  expect(count).toEqual(8);
 });
 test('Validate the Next Button and Previous Button Whether the Pagination works or not in the  Table Records', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
-    await page.goto('/');
-     await dashboardPage.table.waitForTable();
-    await dashboardPage.table.NavigatetoNext();
-    await dashboardPage.table.NavigatetoPrevios();
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  await dashboardPage.table.NavigatetoNext();
+  await dashboardPage.table.NavigatetoPrevios();
 })
 test('Validate the Single Row Data', async ({ page, consumerpage, consumertablepage, dashboardPage }) => {
-    await page.goto('/');
-   await dashboardPage.table.waitForTable();
-    const rowdata = await dashboardPage.table.getRowData(0);
-    console.log(rowdata);
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  const rowdata = await dashboardPage.table.getRowData(0);
+  console.log(rowdata);
 });
 test('validate the Total Records of the Tabale', async ({ page, dashboardPage, consumerpage, consumertablepage }) => {
-    await page.goto('/');
-    await dashboardPage.table.waitForTable();
-    const records = await dashboardPage.table.getAllTableRowsCount();
-    const count = await dashboardPage.table.TotalCount();
-    await expect(records).toBe(5);
+  await page.goto('/');
+  await dashboardPage.table.waitForTable();
+  const records = await dashboardPage.table.getAllTableRowsCount();
+  const count = await dashboardPage.table.TotalCount();
+  await expect(records).toBe(5);
 })
-test('Validate the Per Page Dropdown',async({page,dashboardPage})=>{
-    await page.goto('/');
-    await dashboardPage.selectMeterDropdown(Dropdown);
+test('Validate the Per Page Dropdown', async ({ page, dashboardPage }) => {
+  await page.goto('/');
+  await dashboardPage.selectMeterDropdown(Dropdown);
 })
-test('Validate the Graphs',async({page,dashboardPage})=>{
+test('Validate the Graphs', async ({ page, dashboardPage }) => {
   await page.goto('/');
   await dashboardPage.GraphisLoaded();
   await dashboardPage.Hover();
   await dashboardPage.ValidateGraph();
-  const tooltiptext =  await dashboardPage.printTooltipValue();
+  const tooltiptext = await dashboardPage.printTooltipValue();
   console.log(tooltiptext);
 });
-test("Collect all graph values", async ({ page,dashboardPage }) => {
-    await page.goto('/');
-    await dashboardPage.GraphisLoaded();
-    const graphData = await dashboardPage.collectAllGraphValues();
-    console.log("Graph Data:", graphData);
-
+test("Collect all graph values @regression", async ({ page, dashboardPage }) => {
+  test.setTimeout(120000);
+  await page.goto('/');
+  await dashboardPage.GraphisLoaded();
+  const graphDatas = await dashboardPage.collectAllGraphValues();
+  const graphdata = graphDatas.map(v => parseFloat(v));
+  graphDatas.filter(v => v !== '0')
+  const graphdateswithvalues = await dashboardPage.collectGraphDatesWithValues();
+  const singlerecord = await graphdateswithvalues.find(d => d.date === "Jan 09, 2026")
+  console.log(graphdateswithvalues);
+  console.log(singlerecord);
+  const uniqueDates = new Set(graphdateswithvalues.map(d => d.date));
+  console.log("Graph Data:", uniqueDates);
+  const uniquedata = new Set(graphdateswithvalues.map(d => `${d.date}|${d.value}`));
+  console.log(uniquedata);
+  const record = graphdateswithvalues.find(d => d.date === "Jan 10, 2026");
+  const dates = graphDatas.map(d => d.date);
+  const uniquedates = new Set(dates);
+  expect(record).toBeDefined();
+  expect(record?.value).toBe("93955.00 kVAh");
+  expect(uniquedata.size).toBeGreaterThan(0);
+  expect(uniqueDates.size).toBe(21);
+  expect(uniqueDates.size).toBeGreaterThan(0);
 });
+test('Verify donut chart is visible', async ({ page,dashboardPage }) => {
+  await dashboardPage.navigate();
+  await dashboardPage.verifyChartVisible();
+  await expect(dashboardPage.chart).toBeVisible();
+});
+
+test('Verify total meter count', async ({ page,dashboardPage }) => {
+  await dashboardPage.navigate();
+  const total = await dashboardPage.getTotalCount();
+  console.log(total);
+  expect(total).toContain('19');
+});
+
+test('Verify communicating meters', async ({ page,dashboardPage}) => {
+  await dashboardPage.navigate();
+  expect(await dashboardPage.isCommunicatingVisible);
+});
+
+test('Verify non communicating meters', async ({ page,dashboardPage}) => {
+  await dashboardPage.navigate();
+  expect(await dashboardPage.isNonCommunicatingVisible);
+  await dashboardPage.verifyMeterCounts;
+});
+
 
 

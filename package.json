@@ -10,22 +10,32 @@
     "allure:serve": "npx allure-commandline serve allure-results",
     "allure:generate": "npx allure-commandline generate allure-results --clean",
     "allure:open": "npx allure-commandline open allure-report",
-    "test:report": "playwright test && allure serve allure-results"
+    "clean-report": "rmdir /s /q allure-results && rmdir /s /q allure-report",
+    "report:failed": "playwright test && allure generate allure-results --clean",
+    "test-with-report": "playwright test dashboard.spec.ts --project=ui-tests || (npm run allure:generate && npm run send-email)",
+    "test:report": "playwright test && allure generate allure-results --clean && node utils/sendEmailReport.js",
+    "send-email": "ts-node UI/util/sendEmailReport.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
+    "@types/archiver": "^7.0.0",
     "@types/node": "^25.3.5",
+    "@types/nodemailer": "^7.0.11",
     "allure-commandline": "^2.37.0",
-    "allure-playwright": "^3.5.0"
+    "allure-playwright": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@faker-js/faker": "^10.3.0",
+    "archiver": "^7.0.1",
     "axios": "^1.13.6",
     "csv-parse": "^6.1.0",
     "dotenv": "^17.3.1",
-    "exceljs": "^4.4.0"
+    "exceljs": "^4.4.0",
+    "nodemailer": "^8.0.2"
   }
 }

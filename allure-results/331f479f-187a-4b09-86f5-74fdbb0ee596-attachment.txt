@@ -1,5 +1,0 @@
-{
-  success: false,
-  message: 'Route not found',
-  error: 'Cannot GET /dashboard/widget-data'
-}

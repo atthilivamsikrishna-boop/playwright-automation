@@ -20,7 +20,6 @@ export class ConsumerPage {
   readonly accounttype: Dropdown;
   readonly saveBtn: Locator;
 
-
   constructor(page: Page) {
     this.page = page;
 
@@ -54,6 +53,7 @@ export class ConsumerPage {
       page,
       page.locator('span:has-text("Select Account Type")').locator('..')
     );
+   
 
 
 
@@ -85,4 +85,5 @@ export class ConsumerPage {
     await this.accounttype.select(consumer.accounttype);
     await this.saveBtn.click();
   }
+ 
 }

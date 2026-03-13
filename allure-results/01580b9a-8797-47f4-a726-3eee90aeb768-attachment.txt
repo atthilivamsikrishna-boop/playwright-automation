@@ -1,8 +1,0 @@
-{
-  status: 'success',
-  data: {
-    daily: { xAxisData: [Array], seriesData: [Array] },
-    monthly: { xAxisData: [Array], seriesData: [Array] },
-    seriesColors: [ '#3B82F6', '#10B981' ]
-  }
-}

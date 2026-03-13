@@ -28,12 +28,22 @@ export class DashboardPage {
     readonly clearallfilter: Locator;
     readonly consumers: Locator;
     readonly table: TableComponent;
-    readonly meterrecords : Locator;
+    readonly meterrecords: Locator;
     readonly communication: Locator;
     readonly noncommunication: Locator;
     readonly graph: Locator;
-    readonly chartcanvas : Locator;
-    readonly tooltip : Locator;
+    readonly chartcanvas: Locator;
+    readonly tooltips: Locator;
+    readonly dates: Locator;
+    readonly values: Locator;
+    readonly canvas: Locator;
+    readonly tooltip: Locator;
+    readonly chart: Locator;
+    readonly totalCount: Locator;
+    readonly communicatingLegend: Locator;
+    readonly nonCommunicatingLegend: Locator;
+    readonly logo:Locator;
+
 
     // Values inside cards
     constructor(page: Page) {
@@ -107,8 +117,17 @@ export class DashboardPage {
         this.meterrecords = this.page.locator('table');
         this.graph = this.page.locator('.echarts-for-react').first();
         this.chartcanvas = this.page.locator('.echarts-for-react canvas');
-        this.tooltip = this.page.locator('span:has-text("kVAh")').last();
-  
+        this.tooltips = this.page.locator('span:has-text("kVAh")').last();
+        this.dates = page.locator('.x-axis-label');
+        this.values = page.locator('.bar-value');
+        this.canvas = page.locator('canvas[data-zr-dom-id]');
+        this.tooltip = page.locator('div[style*="z-index: 9999999"]');
+        this.chart = page.locator('[aria-label="pie radius chart"]');
+        this.totalCount = page.locator('svg text').first();
+        this.communicatingLegend = page.locator('svg text').filter({ hasText: 'Communicating' });
+        this.nonCommunicatingLegend = page.locator('svg text').filter({ hasText: 'Non-Communicating' });
+        this.logo =  page.getByAltText('Company Logo');
+
     }
 
     // ---------- VALIDATIONS FOR CONSUMER STATISTICS ----------
@@ -197,7 +216,7 @@ export class DashboardPage {
         await this.metersearchbar.scrollIntoViewIfNeeded();
         await this.metersearchbar.fill(value);
         await this.metersearch.click();
-    }                                   
+    }
     async selectMeterDropdown(option: string) {
         await this.meterDropdown.select(option);
     }
@@ -225,55 +244,119 @@ export class DashboardPage {
     async getHighUsageConsumers() {
         return Number(await this.highUsageValue.textContent());
     }
-    async getCommunicatingMeters(){
-         const text = await this.communication.textContent();
+    async getCommunicatingMeters() {
+        const text = await this.communication.textContent();
         return Number((text ?? '').match(/\d+/)?.[0]);
     }
-    async getNonCommunicatingMeters(){
+    async getNonCommunicatingMeters() {
         const text = await this.noncommunication.textContent();
         return Number((text ?? '').match(/\d+/)?.[0]);
     }
-    async GraphisLoaded(){
+    async GraphisLoaded() {
         await expect(this.graph).toBeVisible();
         await expect(this.chartcanvas).toBeVisible();
     }
-    async Hover(){
+    async Hover() {
         await this.chartcanvas.hover;
     }
-    async ValidateGraph(){
-          await expect(this.graph).toBeVisible();
-          await this.chartcanvas.hover();
-          await expect(this.tooltip).toBeVisible();
+    async ValidateGraph() {
+        await expect(this.graph).toBeVisible();
+        await this.chartcanvas.hover();
+        await expect(this.tooltip).toBeVisible();
     }
-    async printTooltipValue(){
-    await this.chartcanvas.hover();
-    const tooltipText = await this.page.locator('span:has-text("kVAh")').last().textContent();
-    console.log("Energy Tooltip Value:", tooltipText);
+    async printTooltipValue() {
+        await this.chartcanvas.hover();
+        const tooltipText = await this.page.locator('span:has-text("kVAh")').last().textContent();
+        console.log("Energy Tooltip Value:", tooltipText);
     }
 
 
     async collectAllGraphValues() {
-    const canvas = this.chartcanvas;
-    const box = await canvas.boundingBox();
-    if (!box) throw new Error("Canvas not found");
-    const bars = 90;
-    const step = box.width / bars;
-    const values:any[] = [];
-    for (let i = 0; i < bars; i++) {
-        const x = box.x + step * i;
-        const y = box.y + box.height / 2;
-        await this.page.mouse.move(x, y);
-        await this.page.waitForTimeout(300);
-        const tooltipLocator = this.page.locator('span')
-          .filter({ hasText: /\d+\.\d+\s*kVAh/ })
-          .first();
-        const count = await tooltipLocator.count();
-        if (count > 0) {
-            const value = await tooltipLocator.textContent();
-            values.push(value);
-            console.log("Bar value:", value);
+        const canvas = this.chartcanvas;
+        const box = await canvas.boundingBox();
+        if (!box) throw new Error("Canvas not found");
+        const bars = 90;
+        const step = box.width / bars;
+        const values: any[] = [];
+        for (let i = 0; i < bars; i++) {
+            const x = box.x + step * i;
+            const y = box.y + box.height / 2;
+            await this.page.mouse.move(x, y);
+            await this.page.waitForTimeout(300);
+            const tooltipLocator = this.page.locator('span')
+                .filter({ hasText: /\d+\.\d+\s*kVAh/ })
+                .first();
+            const count = await tooltipLocator.count();
+            if (count > 0) {
+                const value = await tooltipLocator.textContent();
+                values.push(value);
+                console.log("Bar value:", value);
+            }
         }
+        return values;
     }
-    return values;
+    async Dates() {
+        const dates = await this.dates.allTextContents();
+        return dates;
     }
+
+    async KVAHValues() {
+        const kvahvalues = await this.values.allTextContents();
+        return kvahvalues;
+    }
+    async collectGraphDatesWithValues() {
+        const canvas = this.canvas;
+        const tooltip = this.tooltip;
+
+        const box = await canvas.boundingBox();
+        const results: { date: string; value: string }[] = [];
+
+        for (let x = 20; x < box!.width; x += 40) {
+
+            await canvas.hover({ position: { x, y: box!.height / 2 } });
+
+            await this.page.waitForTimeout(200);
+
+            const date = await tooltip.locator('div span').first().textContent();
+            const value = await tooltip.locator('span').last().textContent();
+
+            if (date && value) {
+                results.push({
+                    date: date.trim(),
+                    value: value.trim()
+                });
+            }
+        }
+
+        console.log(results);
+        return results;
+    }
+    async navigate() {
+        await this.page.goto('/dashboard');
+    }
+
+    async verifyChartVisible() {
+        await this.chart.waitFor();
+    }
+
+    async getTotalCount() {
+        return this.totalCount.textContent();
+    }
+
+    async isCommunicatingVisible() {
+        return this.communicatingLegend.isVisible();
+    }
+
+    async isNonCommunicatingVisible() {
+        return this.nonCommunicatingLegend.isVisible();
+    }
+    async verifyMeterCounts(total: string, communicating: string, nonCommunicating: string) {
+        await expect(this.totalCount).toContainText(total);
+        await expect(this.communicatingLegend).toContainText(communicating);
+        await expect(this.nonCommunicatingLegend).toContainText(nonCommunicating);
+    }
+     async Logo(){
+    await this.logo.allTextContents();
+  }
+
 }

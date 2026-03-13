@@ -28,7 +28,7 @@ export default defineConfig({
 
     {
       name: 'login-tests',
-      testDir: './UI/tests/auth',
+      testDir: './UI/tests/ui-tests',
       testMatch: /login\.spec\.ts/,
       use: { storageState: undefined }
     },

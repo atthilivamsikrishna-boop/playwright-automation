@@ -1,5 +1,0 @@
-{
-  success: false,
-  message: 'Route not found',
-  error: 'Cannot GET /dashboard/widget-data?data=communicating&startDate=01-01-2024&endDate=15-02-2024&page=1&limit=20&fields=S.No%2CConsumer%20Number%2CConsumer%20Name%2CConsumption%28kVAh%29&top=50'
-}
