@@ -25,7 +25,7 @@ async function sendEmail() {
         html: `
             <h3>Automation Test Failed</h3>
             <p>Click the link below to view the Allure report:</p>
-            <a href="http://192.168.1.12:3000">Open Allure Report</a>
+            <a href="https://atthilivamsikrishna-boop.github.io/playwright-automation/">Open Allure Report</a>
   `
     };
 
