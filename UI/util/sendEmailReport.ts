@@ -12,8 +12,8 @@ async function sendEmail() {
         port: 465,
         secure: true,
         auth: {
-            user: "atthilivamsikrishna@gmail.com",
-            pass: "chsxbqztgyotxuzm"
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
         }
     });
 
@@ -26,7 +26,7 @@ async function sendEmail() {
             <h3>Automation Test Failed</h3>
             <p>Click the link below to view the Allure report:</p>
             <a href="https://atthilivamsikrishna-boop.github.io/playwright-automation/">Open Allure Report</a>
-  `
+    `
     };
 
     await transporter.sendMail(mailOptions);
