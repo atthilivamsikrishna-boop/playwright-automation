@@ -1,0 +1,13 @@
+{
+  '': '',
+  'S.No': '',
+  UID: '',
+  'Consumer Name': '',
+  'Meter SI No': '',
+  'Last Communication Date': '',
+  CMD: '',
+  RMD: '',
+  'Occurred DateTime': '',
+  'Consumption(KVAh)': '',
+  Actions: ''
+}

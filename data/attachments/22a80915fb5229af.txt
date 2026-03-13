@@ -1,0 +1,179 @@
+Bar value: 102900.00 kVAh
+Bar value: 93955.00 kVAh
+Bar value: 76755.00 kVAh
+Bar value: 76755.00 kVAh
+Bar value: 105550.00 kVAh
+Bar value: 108915.00 kVAh
+Bar value: 101095.00 kVAh
+Bar value: 101095.00 kVAh
+Bar value: 81705.00 kVAh
+Bar value: 104465.00 kVAh
+Bar value: 70990.00 kVAh
+Bar value: 70990.00 kVAh
+Bar value: 52430.00 kVAh
+Bar value: 74000.00 kVAh
+Bar value: 76400.00 kVAh
+Bar value: 76400.00 kVAh
+Bar value: 112265.00 kVAh
+Bar value: 110745.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 100040.00 kVAh
+Bar value: 100040.00 kVAh
+Bar value: 106045.00 kVAh
+Bar value: 61290.00 kVAh
+Bar value: 61095.00 kVAh
+Bar value: 61095.00 kVAh
+Bar value: 89925.00 kVAh
+Bar value: 70070.00 kVAh
+Bar value: 103015.00 kVAh
+Bar value: 103015.00 kVAh
+Bar value: 109380.00 kVAh
+Bar value: 110050.00 kVAh
+Bar value: 118590.00 kVAh
+Bar value: 118590.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+Bar value: 0.00 kVAh
+[
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 10, 2026', value: '93955.00 kVAh' },
+  { date: 'Jan 13, 2026', value: '108915.00 kVAh' },
+  { date: 'Jan 16, 2026', value: '104465.00 kVAh' },
+  { date: 'Jan 20, 2026', value: '76400.00 kVAh' },
+  { date: 'Jan 23, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 26, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 29, 2026', value: '61290.00 kVAh' },
+  { date: 'Feb 01, 2026', value: '70070.00 kVAh' },
+  { date: 'Feb 04, 2026', value: '110050.00 kVAh' },
+  { date: 'Feb 07, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 10, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 13, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 16, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 19, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 22, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 25, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 28, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 03, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 06, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 09, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' }
+]
+[
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 10, 2026', value: '93955.00 kVAh' },
+  { date: 'Jan 13, 2026', value: '108915.00 kVAh' },
+  { date: 'Jan 16, 2026', value: '104465.00 kVAh' },
+  { date: 'Jan 20, 2026', value: '76400.00 kVAh' },
+  { date: 'Jan 23, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 26, 2026', value: '0.00 kVAh' },
+  { date: 'Jan 29, 2026', value: '61290.00 kVAh' },
+  { date: 'Feb 01, 2026', value: '70070.00 kVAh' },
+  { date: 'Feb 04, 2026', value: '110050.00 kVAh' },
+  { date: 'Feb 07, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 10, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 13, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 16, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 19, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 22, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 25, 2026', value: '0.00 kVAh' },
+  { date: 'Feb 28, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 03, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 06, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 09, 2026', value: '0.00 kVAh' },
+  { date: 'Mar 12, 2026', value: '0.00 kVAh' }
+]
+undefined
+Graph Data: Set(21) {
+  'Mar 12, 2026',
+  'Jan 10, 2026',
+  'Jan 13, 2026',
+  'Jan 16, 2026',
+  'Jan 20, 2026',
+  'Jan 23, 2026',
+  'Jan 26, 2026',
+  'Jan 29, 2026',
+  'Feb 01, 2026',
+  'Feb 04, 2026',
+  'Feb 07, 2026',
+  'Feb 10, 2026',
+  'Feb 13, 2026',
+  'Feb 16, 2026',
+  'Feb 19, 2026',
+  'Feb 22, 2026',
+  'Feb 25, 2026',
+  'Feb 28, 2026',
+  'Mar 03, 2026',
+  'Mar 06, 2026',
+  'Mar 09, 2026'
+}
+Set(21) {
+  'Mar 12, 2026|0.00 kVAh',
+  'Jan 10, 2026|93955.00 kVAh',
+  'Jan 13, 2026|108915.00 kVAh',
+  'Jan 16, 2026|104465.00 kVAh',
+  'Jan 20, 2026|76400.00 kVAh',
+  'Jan 23, 2026|0.00 kVAh',
+  'Jan 26, 2026|0.00 kVAh',
+  'Jan 29, 2026|61290.00 kVAh',
+  'Feb 01, 2026|70070.00 kVAh',
+  'Feb 04, 2026|110050.00 kVAh',
+  'Feb 07, 2026|0.00 kVAh',
+  'Feb 10, 2026|0.00 kVAh',
+  'Feb 13, 2026|0.00 kVAh',
+  'Feb 16, 2026|0.00 kVAh',
+  'Feb 19, 2026|0.00 kVAh',
+  'Feb 22, 2026|0.00 kVAh',
+  'Feb 25, 2026|0.00 kVAh',
+  'Feb 28, 2026|0.00 kVAh',
+  'Mar 03, 2026|0.00 kVAh',
+  'Mar 06, 2026|0.00 kVAh',
+  'Mar 09, 2026|0.00 kVAh'
+}
