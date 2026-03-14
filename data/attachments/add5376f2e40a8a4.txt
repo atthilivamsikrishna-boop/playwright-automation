@@ -1,0 +1,204 @@
+{
+  success: true,
+  data: [
+    {
+      id: '23',
+      name: 'Skyroot',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X2090346',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '6',
+      name: 'Casper Pharma India Ltd',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1313762',
+      lastCommunicationDate: '14th Mar 2026 12:00:00 PM'
+    },
+    {
+      id: '8',
+      name: 'Safran Aircraft Engine Mini Workshop',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1174645',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '9',
+      name: 'GMR 147 Business School',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1972016',
+      lastCommunicationDate: '14th Mar 2026 12:00:02 PM'
+    },
+    {
+      id: '10',
+      name: 'Safran Electrical',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'XE484946',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '15',
+      name: 'AERO PLAZA',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'XD471423',
+      lastCommunicationDate: '3rd Mar 2026 09:00:02 AM'
+    },
+    {
+      id: '14',
+      name: 'NOVOTEL',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'XD471424',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '4',
+      name: 'Cyient DLM',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1244179',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '18',
+      name: 'Schneider Electric',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: '23010551',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '11',
+      name: 'ESR Industrial',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X2090340',
+      lastCommunicationDate: '14th Mar 2026 12:15:01 PM'
+    },
+    {
+      id: '7',
+      name: 'Safran Aircraft Engine Main Plant',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1428391',
+      lastCommunicationDate: '4th Mar 2026 10:00:02 AM'
+    },
+    {
+      id: '17',
+      name: 'Safran MRO',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: '24021286',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '5',
+      name: 'Multisorb Technologies',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X2233641',
+      lastCommunicationDate: '7th Mar 2026 02:15:00 PM'
+    },
+    {
+      id: '12',
+      name: 'Delhi Public School',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X2091454',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '16',
+      name: 'Technific FMC',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: '23010587',
+      lastCommunicationDate: '14th Mar 2026 12:00:02 PM'
+    },
+    {
+      id: '3',
+      name: 'Cronus Pharma',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: 'X1580068',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '2',
+      name: 'GMR AERO TOWER 2 INCOMER',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: '18132429',
+      lastCommunicationDate: '14th Mar 2026 12:01:27 PM'
+    },
+    {
+      id: '24',
+      name: 'Amity',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'EDU port',
+      status: 'Active',
+      meterNumber: 'X2199608',
+      lastCommunicationDate: '14th Mar 2026 12:00:01 PM'
+    },
+    {
+      id: '22',
+      name: 'Arena',
+      consumption: '0.000',
+      kvahConsumption: '0.000',
+      address: 'SEZ',
+      status: 'Active',
+      meterNumber: '24021328',
+      lastCommunicationDate: '14th Mar 2026 12:00:00 PM'
+    }
+  ],
+  message: 'Consumers for Monthly,Monthly data on 01/01/2026,01/01/2026',
+  pagination: {
+    currentPage: 1,
+    totalPages: 1,
+    totalCount: 19,
+    limit: 50,
+    hasNextPage: false,
+    hasPrevPage: false
+  }
+}
