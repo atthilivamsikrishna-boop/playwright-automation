@@ -14,6 +14,7 @@
     "report:failed": "playwright test && allure generate allure-results --clean",
     "test-with-report": "playwright test dashboard.spec.ts --project=ui-tests || (npm run allure:generate && npm run send-email)",
     "test:report": "playwright test && allure generate allure-results --clean && node utils/sendEmailReport.js",
+    "Report": "if exist allure-results rmdir /s /q allure-results & if exist allure-report rmdir /s /q allure-report",
     "send-email": "ts-node UI/util/sendEmailReport.ts"
   },
   "keywords": [],
