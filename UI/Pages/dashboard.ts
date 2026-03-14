@@ -7,7 +7,7 @@ import { text } from 'stream/consumers';
 export class DashboardPage {
     readonly page: Page;
 
-    // Cards
+
     readonly totalConsumersCard: Locator;
     readonly highUsageCard: Locator;
     readonly totalConsumersValue: Locator;
@@ -45,12 +45,12 @@ export class DashboardPage {
     readonly logo:Locator;
 
 
-    // Values inside cards
     constructor(page: Page) {
         this.page = page;
         this.communication = this.page.locator('svg text').filter({ hasText: /^Communicating:/ });
         this.noncommunication = this.page.locator('svg text').filter({ hasText: /^Non-Communicating:/ });
-        // headings (stable)
+
+
         this.totalConsumersCard = page.getByRole('heading', { name: 'Total Consumers' });
         this.highUsageCard = page.getByRole('heading', { name: 'High-Usage Consumers' });
         this.electricityusage = page.getByRole('heading', {
@@ -60,7 +60,9 @@ export class DashboardPage {
         this.electricitycharges = page.getByRole('heading', {
             name: /Electricity Charges/i
         });
-        // target only Monthly toggle inside "Consumption & Billing"
+       
+
+
         this.monthlyToggle = this.page.locator("//div[contains(@class,'flex-shrink-0')]//span[contains(@class,'relative z-10 px-4 py-1.5 text-sm font-medium rounded-full cursor-pointer select-none transition-all duration-300')][normalize-space()='Monthly']");
 
         this.monthlyelectricityusage = page.getByRole('heading', {
@@ -70,7 +72,7 @@ export class DashboardPage {
             name: /Electricity Charges/i
         });
 
-        //div[contains(@class,'flex-shrink-0')]//span[contains(@class,'relative z-10 px-4 py-1.5 text-sm font-medium rounded-full cursor-pointer select-none transition-all duration-300')][normalize-space()='Monthly']
+        
 
         this.totalConsumersValue = this.totalConsumersCard
             .locator('xpath=ancestor::div[@data-squircle]')
@@ -130,7 +132,7 @@ export class DashboardPage {
 
     }
 
-    // ---------- VALIDATIONS FOR CONSUMER STATISTICS ----------
+  
 
     async validateTotalConsumersCardVisible() {
         await expect(this.totalConsumersCard).toBeVisible();
@@ -152,7 +154,7 @@ export class DashboardPage {
         await expect(this.totalConsumersCard).toBeVisible();
         await expect(this.highUsageCard).toBeVisible();
     }
-    // ---------- VALIDATIONS FOR CONSUMPTION & BILLING CARDS ----------
+   
     async validateElectricityUsage(expectedUsage: string) {
         await expect(this.electricityusage).toBeVisible();
     }
@@ -190,18 +192,18 @@ export class DashboardPage {
         await expect(this.monthlyelectricityusage).toBeVisible();
         await expect(this.monthlyelectricitycharges).toBeVisible();
     }
-    // BONUS: Assert that Monthly values are different from Daily (if data is dynamic)
+   
+
     async assertMonthlyValuesDifferentFromDaily() {
         const dailyUsage = (await this.Consumptioncount.textContent())?.trim();
         const dailyCharges = (await this.BillingCharges.textContent())?.trim();
 
-        // click Monthly
+     
         await this.monthlyToggle.click();
 
-        // wait for data refresh instead of CSS class
         await this.page.waitForLoadState('networkidle');
 
-        // OR wait for value change directly (best)
+      
         await expect(this.Consumptioncount).toHaveText(dailyUsage!);
         await expect(this.BillingCharges).toHaveText(dailyCharges!);
 
