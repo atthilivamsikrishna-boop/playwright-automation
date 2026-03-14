@@ -26,19 +26,22 @@ jobs:
       - name: Clean Allure Results
         run: rm -rf allure-results
 
-        
+
       - name: Run Playwright tests
         id: playwright
         run: npx playwright test
         continue-on-error: true
 
-      
-        
       - name: Generate Allure Report
         if: always()
         run: npx allure generate allure-results --clean -o allure-report
-
-      - name: Deploy report to GitHub Pages
+      - name: Upload Playwright Test Results (Screenshots / Videos / Trace)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+             name: playwright-test-results
+             path: test-results
+      - name: Deploy report to GitHub Pag es
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
